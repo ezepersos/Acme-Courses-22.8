@@ -30,7 +30,7 @@ public class Blink extends AbstractEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
 	@NotNull
-	protected Date instantationMoment;
+	protected Date instantiationMoment;
 
 	@NotBlank
 	@Length(min=1, max=75)
