@@ -38,8 +38,5 @@ public class Course extends AbstractEntity {
 
 	@URL
 	protected String			link;
-
-	// Relations -------------------------------------------------------------
-	//TODO: Terminar con la entidad tutorial
 	
 }
