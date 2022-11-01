@@ -1,4 +1,4 @@
-package acme.entities.documents;
+package acme.entities.tutorials;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,7 +18,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Document extends AbstractEntity {
+public class Tutorial extends AbstractEntity {
 
 	// Serialisation identifier
 
@@ -46,7 +46,7 @@ public class Document extends AbstractEntity {
 	protected String			link;
 
 	@NotNull
-	protected DocumentType documentType;
+	protected TutorialType documentType;
 
 	// Relations -------------------------------------------------------------
 }
