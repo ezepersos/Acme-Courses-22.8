@@ -1,9 +1,8 @@
 package acme.entities.systemConfigurations;
 
-
-import java.util.List;
-
 import javax.persistence.Entity;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import acme.framework.entities.AbstractEntity;
 import lombok.Getter;
@@ -12,23 +11,20 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class SystemConfiguration extends AbstractEntity {
+public class SpamRecords extends AbstractEntity {
 
 	// Serialisation identifier
 
 	private static final long	serialVersionUID	= 1L;
 
 	// Attributes
-
-	protected String systemCurrency;
-
-	protected String acceptedCurrencies;
-
-	protected List<SpamRecords> spamRecords;
+	@NotBlank
+	protected String term;
 	
-	protected Double spamThreshold;
+	@NotNull
+	protected Double weight;
 	
-	protected Double spamBoosterFactor;
-
-
+	protected String booster;
+	
+	
 }
