@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Positive;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
@@ -39,14 +38,14 @@ public class Tutorial extends AbstractEntity {
 	@Length(min = 1, max = 255)
 	protected String			abstractTheory;
 
-	@Positive
+	@NotNull
 	protected Money			cost;
 
 	@URL
 	protected String			link;
 
 	@NotNull
-	protected TutorialType documentType;
+	protected TutorialType tutorialType;
 
 	// Relations -------------------------------------------------------------
 }
