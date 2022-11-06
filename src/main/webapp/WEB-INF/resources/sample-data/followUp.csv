@@ -1,0 +1,4 @@
+key,instantiationMoment,message,link,serialNumber,key:helpRequest
+follow-up-01,2022/11/05 08:00,Some kind of message,https://www.google.com,0001,helpRequest-01
+follow-up-02,2022/11/01 08:00,Some kind of message,https://www.google.com,0002,helpRequest-02
+follow-up-03,2022/11/03 08:00,Some kind of message,https://www.google.com,0003,helpRequest-03
