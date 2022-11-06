@@ -26,9 +26,9 @@ public class SystemConfiguration extends AbstractEntity {
 
 	protected List<SpamRecords> spamRecords;
 	
-	protected Double spamThreshold;
+	protected double spamThreshold;
 	
-	protected Double spamBoosterFactor;
+	protected double spamBoosterFactor;
 
 
 }
