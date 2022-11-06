@@ -1,6 +1,5 @@
 package acme.entities.systemConfigurations;
 
-
 import java.util.List;
 
 import javax.persistence.Entity;
