@@ -27,7 +27,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>714</x>
-      <y>210</y>
+      <y>203</y>
       <w>70</w>
       <h>42</h>
     </coordinates>
@@ -40,7 +40,7 @@ bg=yellow</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>714</x>
-      <y>161</y>
+      <y>147</y>
       <w>70</w>
       <h>42</h>
     </coordinates>
@@ -68,10 +68,10 @@ bg=yellow</panel_attributes>
       <x>637</x>
       <y>210</y>
       <w>91</w>
-      <h>28</h>
+      <h>21</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;70.0;10.0;110.0;20.0</additional_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0;110.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -390,12 +390,12 @@ m2=0..n</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>637</x>
-      <y>182</y>
+      <y>168</y>
       <w>91</w>
-      <h>49</h>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;50.0;70.0;50.0;70.0;10.0;110.0;10.0</additional_attributes>
+    <additional_attributes>10.0;70.0;70.0;70.0;70.0;10.0;110.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -466,5 +466,24 @@ relates ^
 m1=1
 m2=0..n</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>847</x>
+      <y>721</y>
+      <w>441</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+LearnerDashboard
+--
++ totalNumberOfHelpRequestByStatus: Map&lt;HelpRequestStatus, Integer&gt;
++ averageHelpRequestsBudgetByStatusGroupedByCurrency: Map&lt;HelpRequestStatus, Double&gt;
++ deviationHelpRequestsBudgetByStatusGroupedByCurrency: Map&lt;HelpRequestStatus, Double&gt;
++ minimumHelpRequestsBudgetByStatusGroupedByCurrency: Map&lt;HelpRequestStatus, Double&gt;
++ maximumHelpRequestsBudgetByStatusGroupedByCurrency: Map&lt;HelpRequestStatus, Double&gt;
+bg=green</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
