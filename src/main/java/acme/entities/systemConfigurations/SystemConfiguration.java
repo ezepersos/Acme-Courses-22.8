@@ -1,8 +1,6 @@
 package acme.entities.systemConfigurations;
 
 
-import java.util.List;
-
 import javax.persistence.Entity;
 
 import acme.framework.entities.AbstractEntity;
@@ -24,7 +22,7 @@ public class SystemConfiguration extends AbstractEntity {
 
 	protected String acceptedCurrencies;
 
-	protected List<SpamRecords> spamRecords;
+	protected String spamRecords;
 	
 	protected double spamThreshold;
 	
