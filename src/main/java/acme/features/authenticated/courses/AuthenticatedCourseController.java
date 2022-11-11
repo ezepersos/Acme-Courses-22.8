@@ -41,7 +41,7 @@ public class AuthenticatedCourseController extends AbstractController<Authentica
 	protected void initialise() {
 		super.addCommand("show", this.showService);
 		super.addCommand("list", this.listService);
-		super.addCommand("list-with-tutorial", "list", this.listService);
+		super.addCommand("list-with-tutorial", "list", this.listTutorialService);
 	}
 
 }
