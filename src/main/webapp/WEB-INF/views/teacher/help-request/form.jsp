@@ -24,6 +24,4 @@
 	<acme:input-textbox code="teacher.helpRequest.form.label.creationTime" path="creationTime"/>	
 	<acme:input-textbox code="teacher.helpRequest.form.label.endingTime" path="endingTime"/>	
 	<acme:input-textbox code="teacher.helpRequest.form.label.link" path="link"/>	
-	<acme:input-textbox code="teacher.helpRequest.form.label.learner" path="learner.username"/>	
-	<acme:input-textbox code="teacher.helpRequest.form.label.tutorial" path="tutorial.id"/>	
 </acme:form>

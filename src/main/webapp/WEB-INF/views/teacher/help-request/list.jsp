@@ -18,12 +18,10 @@
 <acme:list>
 	<acme:list-column code="teacher.helpRequest.list.label.status" path="status" width="10%"/>
 	<acme:list-column code="teacher.helpRequest.list.label.ticker" path="ticker" width="10%"/>
-	<acme:list-column code="teacher.helpRequest.list.label.statement" path="statement" width="10%"/>
+	<acme:list-column code="teacher.helpRequest.list.label.statement" path="statement" width="30%"/>
 	<acme:list-column code="teacher.helpRequest.list.label.budget" path="budget" width="10%"/>
 	<acme:list-column code="teacher.helpRequest.list.label.startTime" path="startTime" width="10%"/>
 	<acme:list-column code="teacher.helpRequest.list.label.creationTime" path="creationTime" width="10%"/>
 	<acme:list-column code="teacher.helpRequest.list.label.endingTime" path="endingTime" width="10%"/>
 	<acme:list-column code="teacher.helpRequest.list.label.link" path="link" width="10%"/>
-	<acme:list-column code="teacher.helpRequest.list.label.learner" path="learner.username" width="10%"/>
-	<acme:list-column code="teacher.helpRequest.list.label.tutorial" path="tutorial.id" width="10%"/>
 </acme:list>

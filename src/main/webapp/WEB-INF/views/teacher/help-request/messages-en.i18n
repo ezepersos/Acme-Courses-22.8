@@ -16,8 +16,6 @@ teacher.helpRequest.form.label.startTime = Start time
 teacher.helpRequest.form.label.creationTime = Creation Time
 teacher.helpRequest.form.label.endingTime = Ending time
 teacher.helpRequest.form.label.link = Link
-teacher.helpRequest.form.label.learner = Leaner
-teacher.helpRequest.form.label.tutorial = Tutorial
 
 teacher.helpRequest.list.label.status = Status
 teacher.helpRequest.list.label.ticker = Ticker
@@ -27,5 +25,3 @@ teacher.helpRequest.list.label.startTime = Start time
 teacher.helpRequest.list.label.creationTime = Creation Time
 teacher.helpRequest.list.label.endingTime = Ending time
 teacher.helpRequest.list.label.link = Link
-teacher.helpRequest.list.label.learner = Leaner
-teacher.helpRequest.list.label.tutorial = Tutorial

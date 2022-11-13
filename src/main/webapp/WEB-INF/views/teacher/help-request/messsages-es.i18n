@@ -16,8 +16,6 @@ teacher.helpRequest.form.label.startTime = Fecha inicio
 teacher.helpRequest.form.label.creationTime = Fecha creación
 teacher.helpRequest.form.label.endingTime = Fecha finalización
 teacher.helpRequest.form.label.link = Enlace
-teacher.helpRequest.form.label.learner = Estudiante
-teacher.helpRequest.form.label.tutorial = Clase
 
 teacher.helpRequest.list.label.status = Estado
 teacher.helpRequest.list.label.ticker = Marcador
@@ -27,5 +25,3 @@ teacher.helpRequest.list.label.startTime = Fecha inicio
 teacher.helpRequest.list.label.creationTime = Fecha creación
 teacher.helpRequest.list.label.endingTime = Fecha finalización
 teacher.helpRequest.list.label.link = Enlace
-teacher.helpRequest.list.label.learner = Estudiante
-teacher.helpRequest.list.label.tutorial = Clase
