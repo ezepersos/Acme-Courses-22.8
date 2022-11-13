@@ -1,0 +1,31 @@
+# i18n-es.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+teacher.helpRequest.form.label.status = Estado
+teacher.helpRequest.form.label.ticker = Marcador
+teacher.helpRequest.form.label.statement = Comunicado
+teacher.helpRequest.form.label.budget = Presupuesto
+teacher.helpRequest.form.label.startTime = Fecha inicio
+teacher.helpRequest.form.label.creationTime = Fecha creación
+teacher.helpRequest.form.label.endingTime = Fecha finalización
+teacher.helpRequest.form.label.link = Enlace
+teacher.helpRequest.form.label.learner = Estudiante
+teacher.helpRequest.form.label.tutorial = Clase
+
+teacher.helpRequest.list.label.status = Estado
+teacher.helpRequest.list.label.ticker = Marcador
+teacher.helpRequest.list.label.statement = Comunicado
+teacher.helpRequest.list.label.budget = Presupuesto
+teacher.helpRequest.list.label.startTime = Fecha inicio
+teacher.helpRequest.list.label.creationTime = Fecha creación
+teacher.helpRequest.list.label.endingTime = Fecha finalización
+teacher.helpRequest.list.label.link = Enlace
+teacher.helpRequest.list.label.learner = Estudiante
+teacher.helpRequest.list.label.tutorial = Clase
