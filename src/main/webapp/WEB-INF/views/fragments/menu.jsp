@@ -36,6 +36,10 @@
 		<acme:menu-option code="master.menu.teacher" access="hasRole('Teacher')">
 			<acme:menu-suboption code="master.menu.teacher.list-help-request" action="/teacher/help-request/list"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.learner" access="hasRole('Learner')">
+			<acme:menu-suboption code="master.menu.learner.list-help-request" action="/learner/help-request/list"/>
+		</acme:menu-option>
 
 	</acme:menu-left>
 

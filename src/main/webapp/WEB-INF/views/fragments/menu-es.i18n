@@ -54,3 +54,8 @@ master.menu.user-account.become-consumer = Hazte consumidor
 
 master.menu.teacher = Profesor
 master.menu.teacher.list-help-request = Listar peticiones de ayuda
+
+# master.menu.learner ####################################################
+
+master.menu.learner = Estudiante
+master.menu.learner.list-help-request = Listar peticiones de ayuda
