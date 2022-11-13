@@ -1,0 +1,26 @@
+# i18n-en.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.dashboard.form.title = Panel de control
+administrator.dashboard.form.label.total-theory-tutorials = Número total de clases de teoría
+administrator.dashboard.form.label.average-cost-theory-tutorials = Average cost of theory tutorials
+administrator.dashboard.form.label.deviation-cost-theory-tutorials = Coste medio de las clases teóricas
+administrator.dashboard.form.label.minimum-cost-theory-tutorials = Coste mínimo de las clases teóricas
+administrator.dashboard.form.label.maximum-cost-theory-tutorials = Coste máximo de las clases teóricas
+administrator.dashboard.form.label.total-lab-tutorials = Número total de clases de laboratorio
+administrator.dashboard.form.label.average-cost-lab-tutorials = Coste medio de las clases de laboratorio
+administrator.dashboard.form.label.deviation-cost-lab-tutorials = Desviación del coste de las clases de laboratorio
+administrator.dashboard.form.label.minimum-cost-lab-tutorials = Coste mínimo de las clases de laboratorio
+administrator.dashboard.form.label.maximum-cost-lab-tutorials = Coste máximo de las clases de laboratorio
+administrator.dashboard.form.label.total-number-help-requests = Número total de solicitudes de ayuda
+administrator.dashboard.form.label.average-budget-help-requests = Presupuesto medio de las solicitudes de ayuda
+administrator.dashboard.form.label.deviation-budget-help-requests = Desviación del Presupuesto de las solicitudes de ayuda
+administrator.dashboard.form.label.minimum-budget-help-requests = Presupuesto mínimo de solicitudes de ayuda
+administrator.dashboard.form.label.maximum-budget-help-requests = Presupuesto máximo de solicitudes de ayuda
