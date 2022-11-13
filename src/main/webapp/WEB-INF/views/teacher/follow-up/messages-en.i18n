@@ -8,12 +8,12 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-inventor.patronageReport.form.label.automaticSequenceNumber = Automatic sequence number
-inventor.patronageReport.form.label.instantiationMoment = Instantiation moment
-inventor.patronageReport.form.label.message = Message
-inventor.patronageReport.form.label.link = Link
+teacher.followup.form.label.automaticSequenceNumber = Automatic sequence number
+teacher.followup.form.label.instantiationMoment = Instantiation moment
+teacher.followup.form.label.message = Message
+teacher.followup.form.label.link = Link
 
-inventor.patronageReport.list.label.automaticSequenceNumber = Automatic sequence number
-inventor.patronageReport.list.label.instantiationMoment = Instantiation moment
-inventor.patronageReport.list.label.message = Message
-inventor.patronageReport.list.label.link = Link
+teacher.followup.list.label.automaticSequenceNumber = Automatic sequence number
+teacher.followup.list.label.instantiationMoment = Instantiation moment
+teacher.followup.list.label.message = Message
+teacher.followup.list.label.link = Link
