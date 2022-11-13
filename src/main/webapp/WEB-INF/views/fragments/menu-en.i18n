@@ -49,3 +49,8 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
+
+master.menu.learner ####################################################
+
+master.menu.learner = Learner
+master.menu.learner.dashboard = Dashboard
