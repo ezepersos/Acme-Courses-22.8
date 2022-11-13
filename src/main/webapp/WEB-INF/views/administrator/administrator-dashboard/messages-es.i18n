@@ -10,8 +10,8 @@
 
 administrator.dashboard.form.title = Panel de control
 administrator.dashboard.form.label.total-theory-tutorials = Número total de clases de teoría
-administrator.dashboard.form.label.average-cost-theory-tutorials = Average cost of theory tutorials
-administrator.dashboard.form.label.deviation-cost-theory-tutorials = Coste medio de las clases teóricas
+administrator.dashboard.form.label.average-cost-theory-tutorials = Coste medio de las clases teóricas
+administrator.dashboard.form.label.deviation-cost-theory-tutorials = Desviación del coste de las clases teóricas
 administrator.dashboard.form.label.minimum-cost-theory-tutorials = Coste mínimo de las clases teóricas
 administrator.dashboard.form.label.maximum-cost-theory-tutorials = Coste máximo de las clases teóricas
 administrator.dashboard.form.label.total-lab-tutorials = Número total de clases de laboratorio
