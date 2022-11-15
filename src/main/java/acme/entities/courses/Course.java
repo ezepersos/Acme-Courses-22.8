@@ -43,6 +43,8 @@ public class Course extends AbstractEntity {
 	@URL
 	protected String			link;
 	
+	protected boolean isPublished;
+	
 	@Valid
 	@NotNull
 	@ManyToOne(optional = false)
