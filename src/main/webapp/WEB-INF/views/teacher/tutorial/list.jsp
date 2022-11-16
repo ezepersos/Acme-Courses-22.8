@@ -20,7 +20,7 @@
 	<acme:list-column code="teacher.tutorial.list.label.ticker" path="ticker" width="10%"/>
 	<acme:list-column code="teacher.tutorial.list.label.abstractTheory" path="abstractTheory" width="40%"/>
 	<acme:list-column code="teacher.tutorial.list.label.cost" path="cost" width="10%"/>
-	<acme:list-column code="teacher.tutorial.list.label.link" path="link" width="20%"/>
+	<acme:list-column code="teacher.tutorial.list.label.link" path="link" width="10%"/>
 </acme:list>
 
 

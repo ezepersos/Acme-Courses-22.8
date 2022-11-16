@@ -20,3 +20,6 @@ teacher.course.list.label.caption = Título
 teacher.course.list.label.abstractCourse = Curso abstracto
 teacher.course.list.label.link = Link
 teacher.course.list.label.published = Esta publicado?
+
+teacher.course.form.button.quantity.labTutorial = Tutoriales de laboratorio
+teacher.course.form.button.quantity.theoryTutorial = Tutoriales de teoría
