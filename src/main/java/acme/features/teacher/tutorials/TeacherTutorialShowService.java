@@ -42,7 +42,10 @@ public class TeacherTutorialShowService implements AbstractShowService<Teacher, 
 		assert request != null;
 		int id;
 		Principal principal;
+		Tutorial tutorial;
 		principal = request.getPrincipal();
+		id = request.getModel().getInteger("id");
+
 		if (request.getModel().hasAttribute("courseId")) {
 			final List<Integer> toolkits = this.repository.findAllCoursesByTeacherId(principal.getActiveRoleId()).stream().map(AbstractEntity::getId).collect(Collectors.toList());
 			id = request.getModel().getInteger("courseId");
@@ -50,6 +53,11 @@ public class TeacherTutorialShowService implements AbstractShowService<Teacher, 
 				return false;
 			}
 		}
+		tutorial = this.repository.findTutorialById(id);
+		if(tutorial.getTeacher().getUserAccount().getId() != principal.getAccountId()) {
+			return false;
+		}
+		
 		return true;
 
 	}
