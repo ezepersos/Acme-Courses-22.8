@@ -34,7 +34,7 @@
 		</acme:menu-option>
 		<acme:menu-option code="master.menu.learner" access="hasRole('Learner')">
 			<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.learner.dashboard" action="/learner/dashboard"/>			
+			<acme:menu-suboption code="master.menu.learner.dashboard" action="/learner/learner-dashboard/show"/>			
 		</acme:menu-option>
 
 	</acme:menu-left>

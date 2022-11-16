@@ -26,45 +26,80 @@
 			<acme:message code="learner.dashboard.form.label.total-number-help-requests"/>
 		</th>
 		<td>
-			<c:forEach items="${totalNumberOfHelpRequestByStatus}" var="entry">
-	    		${entry.key} = ${entry.value}<br>
-			</c:forEach>
+			<c:choose>
+				<c:when test="${empty totalNumberOfHelpRequestByStatus}">
+					<p>0</p>
+				</c:when>
+				<c:otherwise>
+					<c:forEach items="${totalNumberOfHelpRequestByStatus}" var="entry">
+			    		${entry.key} = ${entry.value}<br>
+					</c:forEach>
+				</c:otherwise>
+			</c:choose>
 		</td>
 	</tr><tr>
 		<th scope="row">
 			<acme:message code="learner.dashboard.form.label.average-budget-help-requests"/>
 		</th>
 		<td>
-			<c:forEach items="${averageHelpRequestsBudgetByStatus}" var="entry">
-	    		${entry.key} = ${entry.value}<br>
-			</c:forEach>
+			<c:choose>
+				<c:when test="${empty averageHelpRequestsBudgetByStatusGroupedByCurrency}">
+					<p>0</p>
+				</c:when>
+				<c:otherwise>
+					<c:forEach items="${averageHelpRequestsBudgetByStatusGroupedByCurrency}" var="entry">
+			    		${entry.key} = ${entry.value}<br>
+					</c:forEach>
+				</c:otherwise>
+			</c:choose>
 		</td>
 	</tr><tr>
 		<th scope="row">
 			<acme:message code="learner.dashboard.form.label.deviation-budget-help-requests"/>
 		</th>
 		<td>
-			<c:forEach items="${deviationHelpRequestsBudgetByStatus}" var="entry">
-	    		${entry.key} = ${entry.value}<br>
-			</c:forEach>
+			<c:choose>
+				<c:when test="${empty deviationHelpRequestsBudgetByStatusGroupedByCurrency}">
+					<p>0</p>
+				</c:when>
+				<c:otherwise>
+					<c:forEach items="${deviationHelpRequestsBudgetByStatusGroupedByCurrency}" var="entry">
+			    		${entry.key} = ${entry.value}<br>
+					</c:forEach>
+				</c:otherwise>
+			</c:choose>
 		</td>
 	</tr><tr>
 		<th scope="row">
 			<acme:message code="learner.dashboard.form.label.minimum-budget-help-requests"/>
 		</th>
 		<td>
-			<c:forEach items="${minimumHelpRequestsBudgetByStatus}" var="entry">
-	    		${entry.key} = ${entry.value}<br>
-			</c:forEach>
+			<c:choose>
+				<c:when test="${empty minimumHelpRequestsBudgetByStatusGroupedByCurrency}">
+					<p>0</p>
+				</c:when>
+				<c:otherwise>
+					<c:forEach items="${minimumHelpRequestsBudgetByStatusGroupedByCurrency}" var="entry">
+			    		${entry.key} = ${entry.value}<br>
+					</c:forEach>
+				</c:otherwise>
+			</c:choose>
 		</td>
 	</tr><tr>
 		<th scope="row">
 			<acme:message code="learner.dashboard.form.label.maximum-budget-help-requests"/>
 		</th>
 		<td>
-			<c:forEach items="${maximumHelpRequestsBudgetByStatus}" var="entry">
-	    		${entry.key} = ${entry.value}<br>
-			</c:forEach>
+			<c:choose>
+				<c:when test="${empty maximumHelpRequestsBudgetByStatusGroupedByCurrency}">
+					<p>0</p>
+				</c:when>
+				<c:otherwise>
+					<c:forEach items="${maximumHelpRequestsBudgetByStatusGroupedByCurrency}" var="entry">
+			    		${entry.key} = ${entry.value}<br>
+					</c:forEach>
+				</c:otherwise>
+			</c:choose>
 		</td>
 	</tr>
 

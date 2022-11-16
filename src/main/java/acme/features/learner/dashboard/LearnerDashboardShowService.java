@@ -44,7 +44,7 @@ public class LearnerDashboardShowService implements AbstractShowService<Learner,
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		request.unbind(entity, model, "totalNumberOfHelpRequestByStatus", "averageHelpRequestsBudgetByStatus", "deviationHelpRequestsBudgetByStatus", "minimumHelpRequestsBudgetByStatus", "maximumHelpRequestsBudgetByStatus");
+		request.unbind(entity, model, "totalNumberOfHelpRequestByStatus", "averageHelpRequestsBudgetByStatusGroupedByCurrency", "deviationHelpRequestsBudgetByStatusGroupedByCurrency", "minimumHelpRequestsBudgetByStatusGroupedByCurrency", "maximumHelpRequestsBudgetByStatusGroupedByCurrency");
 	}
 
 	@Override
