@@ -15,6 +15,7 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 
+
 <acme:form readonly="true">
 	<acme:input-textbox code="teacher.course.form.label.ticker" path="ticker"/>	
 	<acme:input-textbox code="teacher.course.form.label.caption" path="caption"/>	
