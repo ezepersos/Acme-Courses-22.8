@@ -16,8 +16,8 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:form readonly="true">
-    <acme:input-textbox code="inventor.patronageReport.list.label.automaticSequenceNumber" path="automaticSequenceNumber"/>	
-	<acme:input-textbox code="inventor.patronageReport.list.label.instantiationMoment" path="instantiationMoment"/>	
-	<acme:input-textbox code="inventor.patronageReport.list.label.message" path="message"/>	
-	<acme:input-textbox code="inventor.patronageReport.list.label.link" path="link"/>	
+  <acme:input-textbox code="teacher.followup.form.label.automaticSequenceNumber" path="automaticSequenceNumber"/>	
+	<acme:input-textbox code="teacher.followup.form.label.instantiationMoment" path="instantiationMoment"/>	
+	<acme:input-textbox code="teacher.followup.form.label.message" path="message"/>	
+	<acme:input-textbox code="teacher.followup.form.label.link" path="link"/>	
 </acme:form>
