@@ -1,5 +1,6 @@
+package acme.features.teacher.courses;
 /*
- * AuthenticatedAnnouncementController.java
+ * AuthenticatedConsumerController.java
  *
  * Copyright (C) 2012-2022 Rafael Corchuelo.
  *
@@ -9,47 +10,34 @@
  * purposes. The copyright owner does not offer any warranties or representations, nor do
  * they accept any liabilities with respect to them.
  */
-
-package acme.features.teacher.tutorials;
-
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.entities.tutorials.Tutorial;
+import acme.entities.courses.Course;
 import acme.framework.controllers.AbstractController;
 import acme.roles.Teacher;
 
 @Controller
-@RequestMapping("/teacher/tutorial/")
-public class TeacherTutorialController extends AbstractController<Teacher, Tutorial> {
+@RequestMapping("/teacher/course/")
+public class TeacherCourseController extends AbstractController<Teacher, Course> {
 
 	// Internal state ---------------------------------------------------------
-	@Autowired
-	protected TeacherLabListService	listLabService;
-	
-	@Autowired
-	protected TeacherTheoryListService listTheoryService;
-	
-	@Autowired
-	protected TeacherTheoryListService listByCourseService;
-	
-
 
 	@Autowired
-	protected TeacherTutorialShowService	showService;
+	protected TeacherCourseShowService showService;
+	
+	@Autowired
+	protected TeacherCourseListService listService;
 
 	// Constructors -----------------------------------------------------------
 
 
 	@PostConstruct
 	protected void initialise() {
-		super.addCommand("list-lab","list", this.listLabService);
-		super.addCommand("list-theory","list", this.listTheoryService);
-		super.addCommand("list-by-course","list", this.listByCourseService);
 		super.addCommand("show", this.showService);
+		super.addCommand("list", this.listService);
 	}
-
 }

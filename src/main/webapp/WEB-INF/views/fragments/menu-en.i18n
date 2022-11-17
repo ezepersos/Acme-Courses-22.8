@@ -28,10 +28,6 @@ master.menu.anonymous.favourite-link = Favourite link
 master.menu.anonymous.favourite-link-ezequiel = 45814719F: Pérez Sosa, Ezequiel
 master.menu.anonymous.favourite-link-andrea = 77934193G: Meca Sánchez, Andrea
 
-# master.menu.authenticated #######################################################
-
-master.menu.authenticated = Authenticated
-
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
@@ -41,15 +37,12 @@ master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shut-down = Shut down
 
-# master.menu.provider ########################################################
+# master.menu.teacher ###################################################
 
-master.menu.provider = Provider
-master.menu.provider.favourite-link = Favourite link
-
-# master.menu.consumer ##########################################################
-
-master.menu.consumer = Consumer
-master.menu.consumer.favourite-link = Favourite link
+master.menu.teacher = Teacher
+master.menu.teacher.list-courses = List courses
+master.menu.teacher.list-theory = List theory tutorials
+master.menu.teacher.list-lab =  List lab tutorials
 
 # master.menu.user-account ####################################################
 
@@ -59,11 +52,6 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
-
-# master.menu.teacher ####################################################
-master.menu.teacher = Teacher
-master.menu.teacher.list-theory = List theory tutorials
-master.menu.teacher.list-lab =  List lab tutorials
 
 # master.menu.any ####################################################
 master.menu.any = Any

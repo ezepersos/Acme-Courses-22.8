@@ -16,11 +16,9 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="teacher.tutorial.list.label.title" path="title" width="20%"/>
-	<acme:list-column code="teacher.tutorial.list.label.ticker" path="ticker" width="10%"/>
-	<acme:list-column code="teacher.tutorial.list.label.abstractTheory" path="abstractTheory" width="40%"/>
-	<acme:list-column code="teacher.tutorial.list.label.cost" path="cost" width="10%"/>
-	<acme:list-column code="teacher.tutorial.list.label.link" path="link" width="10%"/>
+	<acme:list-column code="teacher.course.list.label.ticker" path="ticker" width="10%"/>
+	<acme:list-column code="teacher.course.list.label.caption" path="caption" width="20%"/>
+	<acme:list-column code="teacher.course.list.label.abstractCourse" path="abstractCourse" width="30%"/>
+	<acme:list-column code="teacher.course.list.label.link" path="link" width="10%"/>
+	<acme:list-column code="teacher.course.list.label.published" path="isPublished" width="10%"/>
 </acme:list>
-
-
