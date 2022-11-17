@@ -1,4 +1,4 @@
-package acme.features.authenticated.blink;
+package acme.features.any.blink;
 
 /*
  * AuthenticatedConsumerController.java
@@ -19,16 +19,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import acme.entities.blinks.Blink;
 import acme.framework.controllers.AbstractController;
-import acme.framework.roles.Authenticated;
+import acme.framework.roles.Any;
 
 @Controller
-@RequestMapping("/authenticated/blink/")
-public class AuthenticatedBlinkController extends AbstractController<Authenticated, Blink> {
+@RequestMapping("/any/blink/")
+public class AnyBlinkController extends AbstractController<Any, Blink> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AuthenticatedBlinkListService listService;
+	protected AnyBlinkListService listService;
 
 	// Constructors -----------------------------------------------------------
 

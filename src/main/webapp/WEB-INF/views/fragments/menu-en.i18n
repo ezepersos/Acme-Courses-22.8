@@ -25,7 +25,6 @@ master.menu.anonymous.favourite-link-andrea = 77934193G: Meca Sánchez, Andrea
 # master.menu.authenticated #######################################################
 
 master.menu.authenticated = Authenticated
-master.menu.authenticated.list-blink = List Blinks
 
 # master.menu.administrator ###################################################
 
@@ -54,3 +53,7 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
+
+# master.menu.any ####################################################
+master.menu.any = Any
+master.menu.any.list-blink = List Blinks

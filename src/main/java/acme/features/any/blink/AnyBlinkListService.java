@@ -1,6 +1,5 @@
-package acme.features.authenticated.blink;
+package acme.features.any.blink;
 /*
- * AuthenticatedConsumerCreateService.java
  *
  * Copyright (C) 2012-2022 Rafael Corchuelo.
  *
@@ -21,16 +20,16 @@ import org.springframework.stereotype.Service;
 import acme.entities.blinks.Blink;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
-import acme.framework.roles.Authenticated;
+import acme.framework.roles.Any;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedBlinkListService implements AbstractListService<Authenticated, Blink> {
+public class AnyBlinkListService implements AbstractListService<Any, Blink> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AuthenticatedBlinkRepository repository;
+	protected AnyBlinkRepository repository;
 
 	@Override
 	public boolean authorise(final Request<Blink> request) {
