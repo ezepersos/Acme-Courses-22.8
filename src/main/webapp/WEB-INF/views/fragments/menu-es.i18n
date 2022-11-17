@@ -58,3 +58,4 @@ master.menu.user-account.become-consumer = Hazte consumidor
 # master.menu.any ####################################################
 master.menu.any = Cualquiera
 master.menu.any.list-blink = Listado Blinks
+master.menu.any.list-userAccounts = Listar cuentas de usuario
