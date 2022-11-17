@@ -23,6 +23,19 @@
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-ezequiel" action="https://www.goodreads.com/"/>
 						<acme:menu-suboption code="master.menu.anonymous.favourite-link-andrea" action="https://www.imdb.com/title/tt3783958/?ref_=nv_sr_srsg_0"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.authenticated.system-config" action="/authenticated/system-configuration/show"/>
+			<acme:menu-suboption code="master.menu.authenticated.list-post" action="/authenticated/post/list"/>
+		</acme:menu-option>
+    
+		<acme:menu-option code="master.menu.any" access="hasRole('Any')">
+			<acme:menu-suboption code="master.menu.any.list-theory" action="/any/tutorial/list-theory"/>
+			<acme:menu-suboption code="master.menu.any.list-lab" action="/any/tutorial/list-lab"/>
+			<acme:menu-suboption code="master.menu.any.list-blink" action="/any/blink/list"/>
+      <acme:menu-suboption code="master.menu.any.list-courses" action="/any/course/list"/>		
+			<acme:menu-suboption code="master.menu.any.list-userAccounts" action="/any/user-account/list"/>
+		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
@@ -32,9 +45,20 @@
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shut-down" action="/administrator/shut-down"/>
 		</acme:menu-option>
+		
+    <acme:menu-option code="master.menu.teacher" access="hasRole('Teacher')">
+      <acme:menu-suboption code="master.menu.teacher.list-courses" action="/teacher/course/list"/>
+			<acme:menu-suboption code="master.menu.teacher.list-theory" action="/teacher/tutorial/list-theory"/>
+			<acme:menu-suboption code="master.menu.teacher.list-lab" action="/teacher/tutorial/list-lab"/>
+      <acme:menu-suboption code="master.menu.teacher.list-follow-up" action="/teacher/follow-up/list"/>
+			<acme:menu-suboption code="master.menu.teacher.list-help-request" action="/teacher/help-request/list"/>
+		</acme:menu-option>
+		
 		<acme:menu-option code="master.menu.learner" access="hasRole('Learner')">
-			<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.learner.dashboard" action="/learner/learner-dashboard/show"/>			
+			<acme:menu-suboption code="master.menu.learner.list-help-request" action="/learner/help-request/list"/>
+      <acme:menu-suboption code="master.menu.learner.list-follow-up" action="/learner/follow-up/list"/>
+      <acme:menu-separator/>
+      <acme:menu-suboption code="master.menu.learner.dashboard" action="/learner/learner-dashboard/show"/>	
 		</acme:menu-option>
 
 	</acme:menu-left>
@@ -46,6 +70,8 @@
 		<acme:menu-option code="master.menu.user-account" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.user-account.general-data" action="/authenticated/user-account/update"/>
 		</acme:menu-option>
+		
+		
 
 		<acme:menu-option code="master.menu.sign-out" action="/master/sign-out" access="isAuthenticated()"/>
 	</acme:menu-right>
