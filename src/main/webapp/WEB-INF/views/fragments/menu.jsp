@@ -25,6 +25,8 @@
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.any" access="hasRole('Any')">
+			<acme:menu-suboption code="master.menu.any.list-theory" action="/any/tutorial/list-theory"/>
+			<acme:menu-suboption code="master.menu.any.list-lab" action="/any/tutorial/list-lab"/>
 			<acme:menu-suboption code="master.menu.any.list-blink" action="/any/blink/list"/>
 		</acme:menu-option>
 
