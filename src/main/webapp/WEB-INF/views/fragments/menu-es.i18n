@@ -38,6 +38,7 @@ master.menu.teacher = Profesor
 master.menu.teacher.list-courses = Lista de cursos
 master.menu.teacher.list-theory = Listar clases de teoría
 master.menu.teacher.list-lab =  Listar clases de laboratorio
+master.menu.teacher.list-help-request = Listar peticiones de ayuda
 
 # master.menu.user-account ####################################################
 master.menu.user-account = Cuenta

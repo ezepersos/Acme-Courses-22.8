@@ -43,6 +43,7 @@ master.menu.teacher = Teacher
 master.menu.teacher.list-courses = List courses
 master.menu.teacher.list-theory = List theory tutorials
 master.menu.teacher.list-lab =  List lab tutorials
+master.menu.teacher.list-help-request = List help requests
 
 # master.menu.user-account ####################################################
 
