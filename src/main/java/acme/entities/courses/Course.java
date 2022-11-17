@@ -47,4 +47,7 @@ public class Course extends AbstractEntity {
 	@NotNull
 	@ManyToOne(optional = false)
 	protected Teacher teacher;
+
+protected boolean isPublished;
+	
 }
