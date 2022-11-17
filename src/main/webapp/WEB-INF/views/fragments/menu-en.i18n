@@ -22,6 +22,10 @@ master.menu.anonymous.favourite-link = Favourite link
 master.menu.anonymous.favourite-link-ezequiel = 45814719F: Pérez Sosa, Ezequiel
 master.menu.anonymous.favourite-link-andrea = 77934193G: Meca Sánchez, Andrea
 
+# master.menu.authenticated #######################################################
+
+master.menu.authenticated = Authenticated
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
@@ -54,3 +58,5 @@ master.menu.user-account.become-consumer = Become a consumer
 master.menu.any = Any
 master.menu.any.list-theory = List theory tutorials
 master.menu.any.list-lab = List lab tutorials
+master.menu.any.list-blink = List Blinks
+master.menu.any.list-userAccounts = List user accounts

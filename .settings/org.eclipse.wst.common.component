@@ -35,7 +35,7 @@
     
     
     
-    <wb-module deploy-name="Hello-World-22.8-22.8">
+    <wb-module deploy-name="Acme-Courses-22.8-22.8">
                                                                                                                                                                                                                                                                                                         
         
         
@@ -239,9 +239,9 @@
         
         
         
-        <property name="java-output-path" value="/Hello-World-22.0/target/classes"/>
+        <property name="java-output-path" value="/Acme-Courses-22.8/target/classes"/>
                 
-        <property name="context-root" value="Hello-World-22.8"/>
+        <property name="context-root" value="Acme-Courses-22.8"/>
                                                                                                                                                                                                                                                                                                     
     
     

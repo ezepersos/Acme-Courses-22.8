@@ -1,4 +1,4 @@
-package acme.features.learner.dashboard;
+package acme.features.any.blink;
 
 /*
  * AuthenticatedConsumerController.java
@@ -17,25 +17,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.forms.LearnerDashboard;
+import acme.entities.blinks.Blink;
 import acme.framework.controllers.AbstractController;
-import acme.roles.Learner;
+import acme.framework.roles.Any;
 
 @Controller
-@RequestMapping("/learner/dashboard/")
-public class LearnerDashboardController extends AbstractController<Learner, LearnerDashboard> {
+@RequestMapping("/any/blink/")
+public class AnyBlinkController extends AbstractController<Any, Blink> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected LearnerDashboardShowService showService;
+	protected AnyBlinkListService listService;
 
 	// Constructors -----------------------------------------------------------
 
 
 	@PostConstruct
 	protected void initialise() {
-		super.addCommand("show", this.showService);
+		super.addCommand("list", this.listService);
 	}
 
 }
