@@ -46,14 +46,12 @@
 			<acme:menu-suboption code="master.menu.administrator.shut-down" action="/administrator/shut-down"/>
 		</acme:menu-option>
 		
-		<acme:menu-option code="master.menu.teacher" access="hasRole('Teacher')">
-			<acme:menu-suboption code="master.menu.teacher.list-help-request" action="/teacher/help-request/list"/>
-		</acme:menu-option>
-
     <acme:menu-option code="master.menu.teacher" access="hasRole('Teacher')">
       <acme:menu-suboption code="master.menu.teacher.list-courses" action="/teacher/course/list"/>
 			<acme:menu-suboption code="master.menu.teacher.list-theory" action="/teacher/tutorial/list-theory"/>
 			<acme:menu-suboption code="master.menu.teacher.list-lab" action="/teacher/tutorial/list-lab"/>
+      <acme:menu-suboption code="master.menu.teacher.list-follow-up" action="/teacher/follow-up/list"/>
+			<acme:menu-suboption code="master.menu.teacher.list-help-request" action="/teacher/help-request/list"/>
 		</acme:menu-option>
 
 	</acme:menu-left>
@@ -65,6 +63,8 @@
 		<acme:menu-option code="master.menu.user-account" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.user-account.general-data" action="/authenticated/user-account/update"/>
 		</acme:menu-option>
+		
+		
 
 		<acme:menu-option code="master.menu.sign-out" action="/master/sign-out" access="isAuthenticated()"/>
 	</acme:menu-right>
