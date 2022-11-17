@@ -1,0 +1,21 @@
+# menu-es.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+﻿authenticated.post.list.label.instantiationMoment = Momento de la instanciación
+authenticated.post.list.label.caption = Título
+authenticated.post.list.label.message = Mensaje
+authenticated.post.list.label.informational = Es de información
+authenticated.post.list.label.url = Link
+
+authenticated.post.form.label.instantiationMoment = Momento de la instanciación
+authenticated.post.form.label.caption = Título
+authenticated.post.form.label.message = Mensaje
+authenticated.post.form.label.informational = Es de información
+authenticated.post.form.label.url = Link
