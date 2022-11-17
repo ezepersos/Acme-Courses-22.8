@@ -1,5 +1,5 @@
 <%--
-- form.jsp
+- list.jsp
 -
 - Copyright (C) 2012-2022 Rafael Corchuelo.
 -
@@ -15,9 +15,9 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
-<acme:form readonly="true">
-  <acme:input-textbox code="teacher.followup.form.label.automaticSequenceNumber" path="automaticSequenceNumber"/>	
-	<acme:input-textbox code="teacher.followup.form.label.instantiationMoment" path="instantiationMoment"/>	
-	<acme:input-textbox code="teacher.followup.form.label.message" path="message"/>	
-	<acme:input-textbox code="teacher.followup.form.label.link" path="link"/>	
-</acme:form>
+<acme:list>
+	<acme:list-column code="learner.followup.list.label.automaticSequenceNumber" path="automaticSequenceNumber" width="10%"/>
+	<acme:list-column code="learner.followup.list.label.instantiationMoment" path="instantiationMoment" width="10%"/>
+	<acme:list-column code="learner.followup.list.label.message" path="message" width="50%"/>
+	<acme:list-column code="learner.followup.list.label.link" path="link" width="30%"/>
+</acme:list>
