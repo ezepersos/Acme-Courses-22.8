@@ -55,6 +55,7 @@ master.menu.learner ####################################################
 master.menu.learner = Estudiante
 master.menu.learner.dashboard = Panel de control
 master.menu.learner.list-help-request = Listar peticiones de ayuda
+master.menu.learner.list-follow-up = Listar seguimientos
 
 # master.menu.any ####################################################
 master.menu.any = Cualquiera

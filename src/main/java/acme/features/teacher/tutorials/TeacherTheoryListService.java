@@ -63,11 +63,6 @@ public class TeacherTheoryListService implements AbstractListService<Teacher, Tu
 		assert request != null;
 		Integer id;
 		Collection<Tutorial> result;
-		if(request.getModel().getInteger("courseId") != null) {
-			id = request.getModel().getInteger("courseId");
-			result = this.repository.findAllTheoryTutorialsByCourseId(id);
-			return result;
-		}else {
 		if (request.getModel().hasAttribute(TeacherTheoryListService.COURSEID)) {
 			id = request.getModel().getInteger(TeacherTheoryListService.COURSEID);
 			result = this.repository.findTutorialByCourse(id);
@@ -76,7 +71,6 @@ public class TeacherTheoryListService implements AbstractListService<Teacher, Tu
 			id = request.getPrincipal().getActiveRoleId();
 			result = this.repository.findTheoryByTeacher(id);
 			return result;
-		}
 		}
 	}
 	

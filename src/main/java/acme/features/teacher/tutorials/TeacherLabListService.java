@@ -63,12 +63,6 @@ public class TeacherLabListService implements AbstractListService<Teacher, Tutor
 		assert request != null;
 		Integer id;
 		Collection<Tutorial> result;
-	
-		if(request.getModel().getInteger("courseId") != null ) {
-			id = request.getModel().getInteger("courseId");
-			result = this.repository.findAllLabTutorialsByCourseId(id);
-			return result;
-		}else {
 		if (request.getModel().hasAttribute(TeacherLabListService.COURSEID)) {
 			id = request.getModel().getInteger(TeacherLabListService.COURSEID);
 			result = this.repository.findTutorialByCourse(id);
@@ -77,7 +71,6 @@ public class TeacherLabListService implements AbstractListService<Teacher, Tutor
 			id = request.getPrincipal().getActiveRoleId();
 			result = this.repository.findLabByTeacher(id);
 			return result;
-		}
 		}
 	}
 	
