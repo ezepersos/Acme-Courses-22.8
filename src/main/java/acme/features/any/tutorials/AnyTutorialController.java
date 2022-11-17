@@ -1,4 +1,4 @@
-package acme.features.authenticated.tutorials;
+package acme.features.any.tutorials;
 
 /*
  * AuthenticatedConsumerController.java
@@ -19,20 +19,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import acme.entities.tutorials.Tutorial;
 import acme.framework.controllers.AbstractController;
-import acme.framework.roles.Authenticated;
+import acme.framework.roles.Any;
 
 @Controller
-@RequestMapping("/authenticated/tutorial/")
-public class AuthenticatedTutorialController extends AbstractController<Authenticated, Tutorial> {
+@RequestMapping("/Any/tutorial/")
+public class AnyTutorialController extends AbstractController<Any, Tutorial> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AuthenticatedTutorialShowService showService;
+	protected AnyTutorialShowService showService;
 	@Autowired
-	protected AuthenticatedTheoryTutorialListService listTheoryService;
+	protected AnyTheoryTutorialListService listTheoryService;
 	@Autowired
-	protected AuthenticatedLabTutorialListService listLabService;
+	protected AnyLabTutorialListService listLabService;
 
 	// Constructors -----------------------------------------------------------
 

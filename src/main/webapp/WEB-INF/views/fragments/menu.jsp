@@ -24,9 +24,9 @@
 						<acme:menu-suboption code="master.menu.anonymous.favourite-link-andrea" action="https://www.imdb.com/title/tt3783958/?ref_=nv_sr_srsg_0"/>
 		</acme:menu-option>
 		
-		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
-			<acme:menu-suboption code="master.menu.authenticated.list-theory" action="/authenticated/tutorial/list-theory"/>
-			<acme:menu-suboption code="master.menu.authenticated.list-lab" action="/authenticated/tutorial/list-lab"/>
+		<acme:menu-option code="master.menu.any" access="hasRole('Any')">
+			<acme:menu-suboption code="master.menu.any.list-theory" action="/any/tutorial/list-theory"/>
+			<acme:menu-suboption code="master.menu.any.list-lab" action="/any/tutorial/list-lab"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
