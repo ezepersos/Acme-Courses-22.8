@@ -1,4 +1,4 @@
-package acme.features.authenticated.courses;
+package acme.features.any.courses;
 
 import java.util.Collection;
 
@@ -8,7 +8,7 @@ import acme.entities.courses.Course;
 import acme.framework.repositories.AbstractRepository;
 
 
-public interface AuthenticatedCourseRepository extends AbstractRepository{
+public interface AnyCourseRepository extends AbstractRepository{
 
 	@Query("select c from Course c where c.id = :id and c.isPublished = TRUE")
 	Course findCouseById(int id);

@@ -1,6 +1,5 @@
-package acme.features.authenticated.courses;
+package acme.features.any.courses;
 /*
- * AuthenticatedConsumerCreateService.java
  *
  * Copyright (C) 2012-2022 Rafael Corchuelo.
  *
@@ -21,16 +20,16 @@ import org.springframework.stereotype.Service;
 import acme.entities.courses.Course;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
-import acme.framework.roles.Authenticated;
+import acme.framework.roles.Any;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AuthenticatedCourseShowService implements AbstractShowService<Authenticated, Course> {
+public class AnyCourseShowService implements AbstractShowService<Any, Course> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AuthenticatedCourseRepository repository;
+	protected AnyCourseRepository repository;
 
 	@Override
 	public boolean authorise(final Request<Course> request) {

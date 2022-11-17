@@ -8,13 +8,13 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.course.form.label.ticker = Ticker
-authenticated.course.form.label.caption = Título
-authenticated.course.form.label.abstractCourse = Curso abstracto
-authenticated.course.form.label.link = Link
-authenticated.course.form.label.costs = Costes
+any.course.form.label.ticker = Ticker
+any.course.form.label.caption = Título
+any.course.form.label.abstractCourse = Curso abstracto
+any.course.form.label.link = Link
+any.course.form.label.costs = Costes
 
-authenticated.course.list.label.ticker = Ticker
-authenticated.course.list.label.caption = Título
-authenticated.course.list.label.abstractCourse = Curso abstracto
-authenticated.course.list.label.link = Link
+any.course.list.label.ticker = Ticker
+any.course.list.label.caption = Título
+any.course.list.label.abstractCourse = Curso abstracto
+any.course.list.label.link = Link

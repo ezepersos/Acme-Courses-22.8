@@ -1,7 +1,6 @@
-package acme.features.authenticated.courses;
+package acme.features.any.courses;
 
 /*
- * AuthenticatedConsumerController.java
  *
  * Copyright (C) 2012-2022 Rafael Corchuelo.
  *
@@ -19,20 +18,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import acme.entities.courses.Course;
 import acme.framework.controllers.AbstractController;
-import acme.framework.roles.Authenticated;
+import acme.framework.roles.Any;
 
 @Controller
-@RequestMapping("/authenticated/course/")
-public class AuthenticatedCourseController extends AbstractController<Authenticated, Course> {
+@RequestMapping("/any/course/")
+public class AnyCourseController extends AbstractController<Any, Course> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AuthenticatedCourseShowService showService;
+	protected AnyCourseShowService showService;
 	@Autowired
-	protected AuthenticatedCourseListService listService;
+	protected AnyCourseListService listService;
 	@Autowired
-	protected AuthenticatedCourseListWithTutorialService listTutorialService;
+	protected AnyCourseListWithTutorialService listTutorialService;
 
 	// Constructors -----------------------------------------------------------
 

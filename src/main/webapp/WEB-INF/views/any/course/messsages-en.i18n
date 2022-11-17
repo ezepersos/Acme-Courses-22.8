@@ -9,13 +9,13 @@
 # they accept any liabilities with respect to them.
 
 
-authenticated.course.form.label.ticker = Ticker
-authenticated.course.form.label.caption = Caption
-authenticated.course.form.label.abstractCourse = Abstract Course
-authenticated.course.form.label.link = Link
-authenticated.course.form.label.costs = Costs
+any.course.form.label.ticker = Ticker
+any.course.form.label.caption = Caption
+any.course.form.label.abstractCourse = Abstract Course
+any.course.form.label.link = Link
+any.course.form.label.costs = Costs
 
-authenticated.course.list.label.ticker = Ticker
-authenticated.course.list.label.caption = Caption
-authenticated.course.list.label.abstractCourse = Abstract Course
-authenticated.course.list.label.link = Link
+any.course.list.label.ticker = Ticker
+any.course.list.label.caption = Caption
+any.course.list.label.abstractCourse = Abstract Course
+any.course.list.label.link = Link
