@@ -9,15 +9,15 @@
 # they accept any liabilities with respect to them.
 
 
-authenticated.tutorial.form.label.title = Títutlo
-authenticated.tutorial.form.label.ticker = Ticker
-authenticated.tutorial.form.label.abstractTheory = Teoría Abstracta
-authenticated.tutorial.form.label.cost = Coste
-authenticated.tutorial.form.label.link = Link
-authenticated.tutorial.form.label.type = Tipo
+any.tutorial.form.label.title = Títutlo
+any.tutorial.form.label.ticker = Ticker
+any.tutorial.form.label.abstractTheory = Teoría Abstracta
+any.tutorial.form.label.cost = Coste
+any.tutorial.form.label.link = Link
+any.tutorial.form.label.type = Tipo
 
 
-authenticated.tutorial.list.label.title = Título
-authenticated.tutorial.list.label.ticker = Ticker
-authenticated.tutorial.list.label.cost = Coste
-authenticated.tutorial.list.label.type = Tipo
+any.tutorial.list.label.title = Título
+any.tutorial.list.label.ticker = Ticker
+any.tutorial.list.label.cost = Coste
+any.tutorial.list.label.type = Tipo

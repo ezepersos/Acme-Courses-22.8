@@ -16,8 +16,8 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="authenticated.tutorial.list.label.title" path="title" width="20%"/>
-	<acme:list-column code="authenticated.tutorial.list.label.ticker" path="ticker" width="10%"/>
-	<acme:list-column code="authenticated.tutorial.list.label.cost" path="cost" width="50%"/>
-	<acme:list-column code="authenticated.tutorial.list.label.type" path="tutorialType" width="20%"/>
+	<acme:list-column code="any.tutorial.list.label.title" path="title" width="20%"/>
+	<acme:list-column code="any.tutorial.list.label.ticker" path="ticker" width="10%"/>
+	<acme:list-column code="any.tutorial.list.label.cost" path="cost" width="50%"/>
+	<acme:list-column code="any.tutorial.list.label.type" path="tutorialType" width="20%"/>
 </acme:list>

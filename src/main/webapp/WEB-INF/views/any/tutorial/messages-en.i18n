@@ -8,15 +8,15 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.tutorial.form.label.title = Title
-authenticated.tutorial.form.label.ticker = Ticker
-authenticated.tutorial.form.label.abstractTheory = Abstract Theory
-authenticated.tutorial.form.label.cost = Cost
-authenticated.tutorial.form.label.link = Link
-authenticated.tutorial.form.label.type = Type
+any.tutorial.form.label.title = Title
+any.tutorial.form.label.ticker = Ticker
+any.tutorial.form.label.abstractTheory = Abstract Theory
+any.tutorial.form.label.cost = Cost
+any.tutorial.form.label.link = Link
+any.tutorial.form.label.type = Type
 
 
-authenticated.tutorial.list.label.title = Title
-authenticated.tutorial.list.label.ticker = Ticker
-authenticated.tutorial.list.label.cost = Cost
-authenticated.tutorial.list.label.type = Type
+any.tutorial.list.label.title = Title
+any.tutorial.list.label.ticker = Ticker
+any.tutorial.list.label.cost = Cost
+any.tutorial.list.label.type = Type
