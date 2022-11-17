@@ -16,9 +16,9 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:list readonly="true">
-	<acme:list-column code="authenticated.blink.list.label.instantiationMoment" path="instantiationMoment" width="20%"/>
-	<acme:list-column code="authenticated.blink.list.label.caption" path="caption" width="10%"/>
-	<acme:list-column code="authenticated.blink.list.label.authorAlias" path="authorAlias" width="20%"/>
-	<acme:list-column code="authenticated.blink.list.label.message" path="message" width="50%"/>
-	<acme:list-column code="authenticated.blink.list.label.email" path="email" width="20%"/>
+	<acme:list-column code="any.blink.list.label.instantiationMoment" path="instantiationMoment" width="20%"/>
+	<acme:list-column code="any.blink.list.label.caption" path="caption" width="10%"/>
+	<acme:list-column code="any.blink.list.label.authorAlias" path="authorAlias" width="20%"/>
+	<acme:list-column code="any.blink.list.label.message" path="message" width="50%"/>
+	<acme:list-column code="any.blink.list.label.email" path="email" width="20%"/>
 </acme:list>

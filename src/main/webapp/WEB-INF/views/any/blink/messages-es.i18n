@@ -8,8 +8,8 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.blink.list.label.instantiationMoment = Momento de instanciación
-authenticated.blink.list.label.caption = Título
-authenticated.blink.list.label.authorAlias = Alias del Autor
-authenticated.blink.list.label.message = Mensaje
-authenticated.blink.list.label.email = Email
+any.blink.list.label.instantiationMoment = Momento de instanciación
+any.blink.list.label.caption = Título
+any.blink.list.label.authorAlias = Alias del Autor
+any.blink.list.label.message = Mensaje
+any.blink.list.label.email = Email
