@@ -1,4 +1,4 @@
-package acme.features.learner.dashboard;
+package acme.features.any.tutorials;
 
 /*
  * AuthenticatedConsumerController.java
@@ -17,25 +17,32 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.forms.LearnerDashboard;
+import acme.entities.tutorials.Tutorial;
 import acme.framework.controllers.AbstractController;
-import acme.roles.Learner;
+import acme.framework.roles.Any;
 
 @Controller
-@RequestMapping("/learner/dashboard/")
-public class LearnerDashboardController extends AbstractController<Learner, LearnerDashboard> {
+@RequestMapping("/Any/tutorial/")
+public class AnyTutorialController extends AbstractController<Any, Tutorial> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected LearnerDashboardShowService showService;
+	protected AnyTutorialShowService showService;
+	@Autowired
+	protected AnyTheoryTutorialListService listTheoryService;
+	@Autowired
+	protected AnyLabTutorialListService listLabService;
 
 	// Constructors -----------------------------------------------------------
 
 
 	@PostConstruct
 	protected void initialise() {
+		super.addCommand("list-theory",  "list", this.listTheoryService);
+		super.addCommand("list-lab",  "list", this.listLabService);
 		super.addCommand("show", this.showService);
+		
 	}
 
 }

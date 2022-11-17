@@ -23,6 +23,12 @@
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-ezequiel" action="https://www.goodreads.com/"/>
 						<acme:menu-suboption code="master.menu.anonymous.favourite-link-andrea" action="https://www.imdb.com/title/tt3783958/?ref_=nv_sr_srsg_0"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.any" access="hasRole('Any')">
+			<acme:menu-suboption code="master.menu.any.list-theory" action="/any/tutorial/list-theory"/>
+			<acme:menu-suboption code="master.menu.any.list-lab" action="/any/tutorial/list-lab"/>
+			<acme:menu-suboption code="master.menu.any.list-blink" action="/any/blink/list"/>
+		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
@@ -35,7 +41,9 @@
 		
 		<acme:menu-option code="master.menu.any" access="hasRole('Any')">
 			<acme:menu-suboption code="master.menu.any.list-courses" action="/any/course/list"/>		
+			<acme:menu-suboption code="master.menu.any.list-userAccounts" action="/any/user-account/list"/>
 		</acme:menu-option>
+    
 	</acme:menu-left>
 
 	<acme:menu-right>
