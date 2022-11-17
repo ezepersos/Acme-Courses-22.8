@@ -45,6 +45,7 @@ master.menu.teacher.list-theory = List theory tutorials
 master.menu.teacher.list-lab =  List lab tutorials
 master.menu.teacher.list-help-request = List help requests
 master.menu.teacher.list-follow-up = List follow-ups
+master.menu.teacher.list-help-request = List help requests
 
 # master.menu.user-account ####################################################
 
@@ -54,6 +55,11 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
+
+# master.menu.learner ####################################################
+
+master.menu.learner = Learner
+master.menu.learner.list-help-request = List help requests
 
 # master.menu.any ####################################################
 master.menu.any = Any

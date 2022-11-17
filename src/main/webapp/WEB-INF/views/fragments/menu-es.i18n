@@ -40,6 +40,7 @@ master.menu.teacher.list-theory = Listar clases de teoría
 master.menu.teacher.list-lab =  Listar clases de laboratorio
 master.menu.teacher.list-help-request = Listar peticiones de ayuda
 master.menu.teacher.list-follow-up = Listar seguimientos
+master.menu.teacher.list-help-request = Listar peticiones de ayuda
 
 # master.menu.user-account ####################################################
 master.menu.user-account = Cuenta
@@ -48,6 +49,10 @@ master.menu.user-account.provider = Datos de proveedor
 master.menu.user-account.become-provider = Hazte proveedor
 master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
+
+# master.menu.learner ####################################################
+master.menu.learner = Estudiante
+master.menu.learner.list-help-request = Listar peticiones de ayuda
 
 # master.menu.any ####################################################
 master.menu.any = Cualquiera
