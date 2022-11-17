@@ -18,6 +18,7 @@ master.menu.sign-out = Salir
 # master.menu.authenticated #######################################################
 
 master.menu.authenticated = Autenticado
+master.menu.authenticated.system-config = Configuración del sistema
 master.menu.authenticated.list-post = Lista de post
 
 # master.menu.anonymous #######################################################
