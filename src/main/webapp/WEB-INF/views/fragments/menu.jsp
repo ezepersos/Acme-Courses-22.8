@@ -40,10 +40,10 @@
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.any" access="hasRole('Any')">
+			<acme:menu-suboption code="master.menu.any.list-courses" action="/any/course/list"/>		
 			<acme:menu-suboption code="master.menu.any.list-userAccounts" action="/any/user-account/list"/>
 		</acme:menu-option>
-		
-		
+    
 	</acme:menu-left>
 
 	<acme:menu-right>

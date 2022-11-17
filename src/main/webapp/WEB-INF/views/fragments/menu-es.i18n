@@ -57,6 +57,7 @@ master.menu.user-account.become-consumer = Hazte consumidor
 
 # master.menu.any ####################################################
 master.menu.any = Cualquiera
+master.menu.any.list-courses = Lista de cursos
 master.menu.any.list-theory = Lista de Tutorials de Teoría
 master.menu.any.list-lab = Lista de Tutoriales de Lab
 master.menu.any.list-blink = Listado Blinks
