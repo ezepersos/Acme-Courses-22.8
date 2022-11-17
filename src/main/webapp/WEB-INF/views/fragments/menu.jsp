@@ -33,6 +33,8 @@
 			<acme:menu-suboption code="master.menu.any.list-theory" action="/any/tutorial/list-theory"/>
 			<acme:menu-suboption code="master.menu.any.list-lab" action="/any/tutorial/list-lab"/>
 			<acme:menu-suboption code="master.menu.any.list-blink" action="/any/blink/list"/>
+      <acme:menu-suboption code="master.menu.any.list-courses" action="/any/course/list"/>		
+			<acme:menu-suboption code="master.menu.any.list-userAccounts" action="/any/user-account/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
@@ -43,12 +45,12 @@
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shut-down" action="/administrator/shut-down"/>
 		</acme:menu-option>
-		
-		<acme:menu-option code="master.menu.any" access="hasRole('Any')">
-			<acme:menu-suboption code="master.menu.any.list-courses" action="/any/course/list"/>		
-			<acme:menu-suboption code="master.menu.any.list-userAccounts" action="/any/user-account/list"/>
+
+    <acme:menu-option code="master.menu.teacher" access="hasRole('Teacher')">
+			<acme:menu-suboption code="master.menu.teacher.list-theory" action="/teacher/tutorial/list-theory"/>
+			<acme:menu-suboption code="master.menu.teacher.list-lab" action="/teacher/tutorial/list-lab"/>
 		</acme:menu-option>
-    
+
 	</acme:menu-left>
 
 	<acme:menu-right>
