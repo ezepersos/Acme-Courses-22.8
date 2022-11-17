@@ -39,10 +39,4 @@ public interface TeacherTutorialRepository extends AbstractRepository {
 	@Query("select distinct q.course from Quantity q where q.course.teacher.id = :teacherId")
 	Collection<Course> findAllCoursesByTeacherId(int teacherId);
 	
-	@Query("select qty.tutorial from Quantity qty where qty.course.id = :id and qty.tutorial.tutorialType = acme.entities.tutorials.TutorialType.LAB")
-	Collection<Tutorial> findAllLabTutorialsByCourseId(int id);
-	
-	@Query("select qty.tutorial from Quantity qty where qty.course.id = :id and qty.tutorial.tutorialType = acme.entities.tutorials.TutorialType.THEORY")
-	Collection<Tutorial> findAllTheoryTutorialsByCourseId(int id);
-	
 }

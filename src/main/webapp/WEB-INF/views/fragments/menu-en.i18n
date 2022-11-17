@@ -61,6 +61,7 @@ master.menu.learner ####################################################
 master.menu.learner = Learner
 master.menu.learner.dashboard = Dashboard
 master.menu.learner.list-help-request = List help requests
+master.menu.learner.list-follow-up = List follow ups
 
 # master.menu.any ####################################################
 master.menu.any = Any
