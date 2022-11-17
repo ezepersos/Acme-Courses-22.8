@@ -1,5 +1,6 @@
+package acme.features.any.tutorials;
 /*
- * AuthenticatedAnnouncementShowService.java
+ * AuthenticatedConsumerCreateService.java
  *
  * Copyright (C) 2012-2022 Rafael Corchuelo.
  *
@@ -10,56 +11,28 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.teacher.tutorials;
-
-import java.util.List;
-import java.util.stream.Collectors;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.tutorials.Tutorial;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
-import acme.framework.entities.AbstractEntity;
-import acme.framework.entities.Principal;
+import acme.framework.roles.Any;
 import acme.framework.services.AbstractShowService;
-import acme.roles.Teacher;
 
 @Service
-public class TeacherTutorialShowService implements AbstractShowService<Teacher, Tutorial> {
+public class AnyTutorialShowService implements AbstractShowService<Any, Tutorial> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected TeacherTutorialRepository repository;
-
-	// AbstractShowService<Administrator, Announcement> interface --------------
-
+	protected AnyTutorialRepository repository;
 
 	@Override
 	public boolean authorise(final Request<Tutorial> request) {
 		assert request != null;
-		int id;
-		Principal principal;
-		Tutorial tutorial;
-		principal = request.getPrincipal();
-		id = request.getModel().getInteger("id");
 
-		if (request.getModel().hasAttribute("courseId")) {
-			final List<Integer> toolkits = this.repository.findAllCoursesByTeacherId(principal.getActiveRoleId()).stream().map(AbstractEntity::getId).collect(Collectors.toList());
-			id = request.getModel().getInteger("courseId");
-			if (!toolkits.contains(id)) {
-				return false;
-			}
-		}
-		tutorial = this.repository.findTutorialById(id);
-		if(tutorial.getTeacher().getUserAccount().getId() != principal.getAccountId()) {
-			return false;
-		}
-		
 		return true;
-
 	}
 
 	@Override
@@ -67,21 +40,23 @@ public class TeacherTutorialShowService implements AbstractShowService<Teacher, 
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-
-		request.unbind(entity, model, "title", "ticker", "abstractTheory", "cost", "link");
+		
+		request.unbind(entity, model, "title", "ticker", "abstractTheory", "cost", "link", "tutorialType");
+		
 	}
 
 	@Override
 	public Tutorial findOne(final Request<Tutorial> request) {
 		assert request != null;
-
-		Tutorial result;
+		Tutorial tutorial;
 		int id;
 
 		id = request.getModel().getInteger("id");
-		result = this.repository.findTutorialById(id);
-
-		return result;
+		tutorial = this.repository.findTutorialById(id);
+		
+		return tutorial;
 	}
+
+	// Internal state ---------------------------------------------------------
 
 }
