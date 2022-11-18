@@ -19,7 +19,7 @@ master.menu.sign-out = Sign out
 
 master.menu.authenticated = Authenticated
 master.menu.authenticated.system-config = System configuration
-master.menu.authenticated.list-post = Post list
+master.menu.authenticated.list-post = List Post
 
 # master.menu.anonymous #######################################################
 
@@ -64,9 +64,8 @@ master.menu.learner.list-help-request = List help requests
 master.menu.learner.list-follow-up = List follow ups
 
 # master.menu.any ####################################################
-master.menu.any = Any
 master.menu.any.list-courses = List courses
 master.menu.any.list-theory = List theory tutorials
 master.menu.any.list-lab = List lab tutorials
-master.menu.any.list-blink = List Blinks
+master.menu.any.list-blink = List blinks
 master.menu.any.list-userAccounts = List user accounts

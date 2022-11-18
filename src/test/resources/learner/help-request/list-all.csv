@@ -1,0 +1,4 @@
+recordIndex,status,ticker,statement,budget,startTime,creationTime,endingTime,link
+0,ACCEPTED,POR-960:FJI,statement of help request 04,"USD 16,000.00",2023/01/03 08:00,2022/10/21 08:00,2023/01/15 08:00,"https://www.google.com/"
+1,DENIED,JAS-295:AKPSOW,statement of help request 05,"USD 21,000.00",2023/01/23 08:00,2022/10/04 08:00,2023/01/26 08:00,"https://www.google.com/"
+2,PROPOSED,HSI-951:AJOWI,statement of help request 01,"USD 20,000.00",2023/01/01 08:00,2022/10/01 08:00,2023/01/05 08:00,"https://www.google.com/"

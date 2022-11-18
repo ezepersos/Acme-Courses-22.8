@@ -1,5 +1,5 @@
 /*
- * FavouriteLinkTest.java
+ * SignUpTest.java
  *
  * Copyright (C) 2012-2022 Rafael Corchuelo.
  *
@@ -10,27 +10,30 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.testing;
+package acme.testing.authenticated.systemConfiguration;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-public class FavouriteLinkTest extends TestHarness {
+import acme.testing.TestHarness;
+
+public class AuthenticatedSystemConfigurationShowTest extends TestHarness {
 
 	// Lifecycle management ---------------------------------------------------
 
 	// Test cases -------------------------------------------------------------
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/favourite-link/positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/authenticated/system-configuration/show.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void positiveSignUp(final String link, final String toClick) {
-		super.navigateHome();
-		super.clickOnMenu("Anonymous", toClick);
-		super.checkCurrentUrl(link);
+	public void positiveSecurityConfiguration(final String user, final String password, final String systemcurrency, final String acceptedCurrency) {
+		super.signIn(user, password);
+		super.clickOnMenu("Authenticated", "System configuration");
+		super.checkFormExists();
+		super.checkInputBoxHasValue("systemCurrency", systemcurrency);
+		super.checkInputBoxHasValue("acceptedCurrencies", acceptedCurrency);
+		
+		super.signOut();
 	}
-
-	// Ancillary methods ------------------------------------------------------
-
 }
