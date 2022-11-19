@@ -42,10 +42,8 @@ public class AnyUserAccountsListService implements AbstractListService<Any, User
 					isAdmin=true;
 				}
 			}
-			if(!isAdmin) {
-				if(!ua.isAnonymous()) {
-					result.add(ua);
-				}
+			if(!isAdmin && !ua.isAnonymous()) {
+				result.add(ua);
 			}
 		}
 		return result;
