@@ -1,0 +1,9 @@
+# i18n-en.i18n
+
+authenticated.teacher.teacher.form.title.create = Become an teacher
+
+authenticated.teacher.form.label.school = School
+authenticated.teacher.form.label.statement = Statement
+authenticated.teacher.form.label.hyperlink = Link
+
+authenticated.teacher.form.button.create = register
