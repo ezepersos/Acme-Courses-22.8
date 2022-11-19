@@ -1,0 +1,3 @@
+user,password,systemCurrency,acceptedCurrencies
+learner1,learner1,EUR,EUR;USD;GBP
+teacher1,teacher1,EUR,EUR;USD;GBP
