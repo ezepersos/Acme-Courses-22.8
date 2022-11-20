@@ -27,3 +27,6 @@ teacher.helpRequest.list.label.startTime = Start time
 teacher.helpRequest.list.label.creationTime = Creation Time
 teacher.helpRequest.list.label.endingTime = Ending time
 teacher.helpRequest.list.label.link = Link
+
+teacher.followup.form.button.create = Create follow up
+teacher.helprequest.form.button.learner = Show learner

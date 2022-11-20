@@ -20,7 +20,6 @@ public class SpamFilterService {
 	}
 
 	private void initFilter() {
-		
 		final List<SystemConfiguration> allConfigurations = new ArrayList<>(this.repository.findAllConfigurations());
 		final SystemConfiguration sysCon = allConfigurations.get(0);
 		
@@ -32,7 +31,3 @@ public class SpamFilterService {
 		return SpamFilter.isSpam(cadena);
 	}
 	}
-
-
-
-
