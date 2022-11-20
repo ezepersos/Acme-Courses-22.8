@@ -48,7 +48,7 @@ public class AdministratorSystemConfigShowService implements AbstractShowService
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "systemCurrency", "acceptedCurrencies");
+		request.unbind(entity, model, "systemCurrency", "acceptedCurrencies", "spamRecords", "spamThreshold", "spamBoosterFactor");
 	}
 
 	@Override

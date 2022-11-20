@@ -12,3 +12,6 @@ administrator.configuration.form.title.general-indicators = Currencies
 
 administrator.configuration.form.label.system-currency = System currency
 administrator.configuration.form.label.accepted-currencies = Accepted currencies
+administrator.configuration.form.label.spamRecords = Spam records
+administrator.configuration.form.label.spamThreshold = Spam threshold
+administrator.configuration.form.label.spamBoosterFactor = Spam booster factor

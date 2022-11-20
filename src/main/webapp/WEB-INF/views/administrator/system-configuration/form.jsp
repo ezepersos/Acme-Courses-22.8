@@ -22,4 +22,8 @@
 <acme:form readonly="true">
 	<acme:input-textbox code="administrator.configuration.form.label.system-currency" path="systemCurrency"/>	
 	<acme:input-textbox code="administrator.configuration.form.label.accepted-currencies" path="acceptedCurrencies"/>	
+<acme:input-textbox code="administrator.configuration.form.label.spamRecords" path="spamRecords"/>	
+<acme:input-textbox code="administrator.configuration.form.label.spamThreshold" path="spamThreshold"/>	
+<acme:input-textbox code="administrator.configuration.form.label.spamBoosterFactor" path="spamBoosterFactor"/>	
+
 </acme:form>
