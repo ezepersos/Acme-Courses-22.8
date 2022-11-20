@@ -15,3 +15,4 @@ administrator.configuration.form.label.accepted-currencies = Accepted currencies
 administrator.configuration.form.label.spamRecords = Spam records
 administrator.configuration.form.label.spamThreshold = Spam threshold
 administrator.configuration.form.label.spamBoosterFactor = Spam booster factor
+administrator.item.form.button.update = Update system configuration
