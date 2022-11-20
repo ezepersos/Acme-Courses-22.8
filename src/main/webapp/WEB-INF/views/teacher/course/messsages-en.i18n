@@ -32,4 +32,5 @@ teacher.course.form.button.quantity.theoryTutorial = Theory tutorials
 
 teacher.course.form.error.duplicated = This ticker already exits
 teacher.course.form.error.spam = This fields contains spam words
+teacher.course.form.button.quantity = Add tutorial
 

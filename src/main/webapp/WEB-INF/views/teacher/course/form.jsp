@@ -24,9 +24,6 @@
 	<jstl:if test="${acme:anyOf(command, 'show') &&  isPublished == true }">
 	<acme:input-textbox code="teacher.course.form.label.costs" path="costs"/>
 	</jstl:if>
-	<jstl:if test="${acme:anyOf(command, 'show')}">
-		<acme:input-textbox code="teacher.course.form.label.published" path="isPublished"/>
-	</jstl:if>
 	<jstl:if test="${acme:anyOf(command, 'show, update, delete, publish') && isPublished == false}">
 		<acme:submit code="teacher.course.form.button.update" action="/teacher/course/update"/>
 		<acme:submit code="teacher.course.form.button.delete" action="/teacher/course/delete?id=${id}"/>
@@ -39,4 +36,7 @@
 <jstl:if test="${acme:anyOf(command, 'show') && isPublished == true}">
 	<acme:button code="teacher.course.form.button.quantity.labTutorial" action="/teacher/tutorial/list-lab?courseId=${id}"/>
 	<acme:button code="teacher.course.form.button.quantity.theoryTutorial" action="/teacher/tutorial/list-theory?courseId=${id}"/>
+</jstl:if>
+<jstl:if test="${acme:anyOf(command, 'show') && isPublished == false}">
+	<acme:button code="teacher.course.form.button.quantity" action="/teacher/quantity/list?courseId=${id}"/>
 </jstl:if>

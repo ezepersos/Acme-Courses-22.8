@@ -31,3 +31,5 @@ teacher.course.form.error.spam = Este campo contiene palabras spam
 
 teacher.course.form.button.quantity.labTutorial = Tutoriales de laboratorio
 teacher.course.form.button.quantity.theoryTutorial = Tutoriales de teoría
+
+teacher.course.form.button.quantity = Añadir tutorial
