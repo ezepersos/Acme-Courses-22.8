@@ -13,3 +13,15 @@ any.blink.list.label.caption = Caption
 any.blink.list.label.authorAlias = Author Alias
 any.blink.list.label.message = Message
 any.blink.list.label.email = Email
+
+
+any.blink.form.label.caption = Caption
+any.blink.form.label.authorAlias = Author Alias
+any.blink.form.label.message = Message
+any.blink.form.label.email = Email
+any.blink.form.label.confirm = I am aware this blink can't be deleted nor modified after its creation
+
+any.blink.form.button.create = Create blink
+
+any.blink.form.error.spam = This field has spam
+any.blink.form.error.must-confirm = You must confirm this field
