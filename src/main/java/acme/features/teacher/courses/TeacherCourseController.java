@@ -31,6 +31,18 @@ public class TeacherCourseController extends AbstractController<Teacher, Course>
 	
 	@Autowired
 	protected TeacherCourseListService listService;
+	
+	@Autowired
+	protected TeacherCourseCreateService createService;
+	
+	@Autowired
+	protected TeacherCourseUpdateService updateService;
+	
+	@Autowired
+	protected TeacherCourseDeleteService deleteService;
+	
+	@Autowired
+	protected TeacherCoursePublishService publishService;
 
 	// Constructors -----------------------------------------------------------
 
@@ -39,5 +51,9 @@ public class TeacherCourseController extends AbstractController<Teacher, Course>
 	protected void initialise() {
 		super.addCommand("show", this.showService);
 		super.addCommand("list", this.listService);
+		super.addCommand("create", this.createService);
+		super.addCommand("delete", this.deleteService);
+		super.addCommand("update", this.updateService);
+		super.addCommand("publish", "update", this.publishService);
 	}
 }

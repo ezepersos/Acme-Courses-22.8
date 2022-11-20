@@ -22,3 +22,4 @@
 	<acme:list-column code="teacher.course.list.label.link" path="link" width="10%"/>
 	<acme:list-column code="teacher.course.list.label.published" path="isPublished" width="10%"/>
 </acme:list>
+<acme:button code="teacher.course.list.button.create" action="/teacher/course/create"/>

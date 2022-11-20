@@ -16,13 +16,25 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 
 
-<acme:form readonly="true">
+<acme:form>
 	<acme:input-textbox code="teacher.course.form.label.ticker" path="ticker"/>	
 	<acme:input-textbox code="teacher.course.form.label.caption" path="caption"/>	
 	<acme:input-textarea code="teacher.course.form.label.abstractCourse" path="abstractCourse"/>
 	<acme:input-textbox code="teacher.course.form.label.link" path="link"/>
+	<jstl:if test="${acme:anyOf(command, 'show') &&  isPublished == true }">
 	<acme:input-textbox code="teacher.course.form.label.costs" path="costs"/>
-	<acme:input-textbox code="teacher.course.form.label.published" path="isPublished"/>
+	</jstl:if>
+	<jstl:if test="${acme:anyOf(command, 'show')}">
+		<acme:input-textbox code="teacher.course.form.label.published" path="isPublished"/>
+	</jstl:if>
+	<jstl:if test="${acme:anyOf(command, 'show, update, delete, publish') && isPublished == false}">
+		<acme:submit code="teacher.course.form.button.update" action="/teacher/course/update"/>
+		<acme:submit code="teacher.course.form.button.delete" action="/teacher/course/delete?id=${id}"/>
+		<acme:submit code="teacher.course.form.button.publish" action="/teacher/course/publish?id=${id}"/>
+	</jstl:if>
+	<jstl:if test="${acme:anyOf(command, 'create')}">
+	<acme:submit code="teacher.course.form.button.create" action="/teacher/course/create"/>
+	</jstl:if>
 </acme:form>
 <jstl:if test="${acme:anyOf(command, 'show') && isPublished == true}">
 	<acme:button code="teacher.course.form.button.quantity.labTutorial" action="/teacher/tutorial/list-lab?courseId=${id}"/>

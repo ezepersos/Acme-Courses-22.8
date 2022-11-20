@@ -14,12 +14,20 @@ teacher.course.form.label.abstractCourse = Curso abstracto
 teacher.course.form.label.link = Link
 teacher.course.form.label.costs = Costes
 teacher.course.form.label.published = Esta publicado?
+teacher.course.form.button.update = Actualizar
+teacher.course.form.button.delete = Borrar
+teacher.course.form.button.create = Crear
+teacher.course.form.button.publish = Publicar
 
 teacher.course.list.label.ticker = Ticker
 teacher.course.list.label.caption = Título
 teacher.course.list.label.abstractCourse = Curso abstracto
 teacher.course.list.label.link = Link
 teacher.course.list.label.published = Esta publicado?
+teacher.course.list.button.create = Crear
+
+teacher.course.form.error.duplicated = Este ticker ya existe
+teacher.course.form.error.spam = Este campo contiene palabras spam
 
 teacher.course.form.button.quantity.labTutorial = Tutoriales de laboratorio
 teacher.course.form.button.quantity.theoryTutorial = Tutoriales de teoría
