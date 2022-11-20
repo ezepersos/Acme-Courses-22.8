@@ -25,3 +25,18 @@ learner.helpRequest.list.label.startTime = Fecha inicio
 learner.helpRequest.list.label.creationTime = Fecha creación
 learner.helpRequest.list.label.endingTime = Fecha finalización
 learner.helpRequest.list.label.link = Enlace
+learner.helpRequest.form.label.tutorial = Tutorial
+learner.helpRequest.form.label.teacher = Profesor
+
+
+learner.helpRequest.form.error.startDateAfter = Las peticiones de ayuda deben ser minimo de un dia de duración
+learner.helpRequest.form.error.creationDateAfter = La fecha de inicio debe ser al menos una semana después de su creación
+learner.helpRequest.form.error.duplicated = Este valor ya existe
+learner.helpRequest.form.button.create = Crear
+learner.helpRequest.list.button.create = Crear
+learner.helpRequest.form.button.update = Actualizar
+learner.helpRequest.form.button.delete = Eliminar
+learner.helpRequest.form.button.publish = Publicar
+learner.helpRequest.form.button.teacher = Mostrar profesor
+
+

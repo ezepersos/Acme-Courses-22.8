@@ -25,3 +25,16 @@ learner.helpRequest.list.label.startTime = Start time
 learner.helpRequest.list.label.creationTime = Creation Time
 learner.helpRequest.list.label.endingTime = Ending time
 learner.helpRequest.list.label.link = Link
+learner.helpRequest.form.label.tutorial = Tutorial
+learner.helpRequest.form.label.teacher = Teacher
+
+learner.helpRequest.form.error.startDateAfter = Help request must be minimum one day long
+learner.helpRequest.form.error.creationDateAfter = Start time must be one week after creation
+learner.helpRequest.form.error.duplicated = This value is duplicated
+learner.helpRequest.form.button.create = Create
+learner.helpRequest.list.button.create = Create
+learner.helpRequest.form.button.update = Update
+learner.helpRequest.form.button.delete = Delete
+learner.helpRequest.form.button.publish = Publish
+learner.helpRequest.form.button.teacher = Show professor
+

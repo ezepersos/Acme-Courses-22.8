@@ -14,6 +14,6 @@ public interface TeacherHelpRequestRepository extends AbstractRepository {
 	@Query("select hr from HelpRequest hr where hr.id = :id")
 	HelpRequest findHelpRequestById(int id);
 	
-	@Query("select hr from HelpRequest hr where hr.teacher.id = :teacherId")
+	@Query("select hr from HelpRequest hr where hr.teacher.id = :teacherId and hr.isPublished = true")
 	Collection<HelpRequest> findAllHelpRequestByTeacherId(int teacherId);
 }
