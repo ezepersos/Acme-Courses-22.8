@@ -12,6 +12,8 @@ learner.followup.form.label.automaticSequenceNumber = Número de secuencia autom
 learner.followup.form.label.instantiationMoment = Momento de la instanciación
 learner.followup.form.label.message = Mensaje
 learner.followup.form.label.link = Link
+learner.followup.form.checkbox.confirm = Confirmar
+learner.followup.form.button.create = Crear
 
 learner.followup.list.label.automaticSequenceNumber = Número de secuencia automático
 learner.followup.list.label.instantiationMoment = Momento de la instanciación

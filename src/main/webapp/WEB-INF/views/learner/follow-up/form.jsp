@@ -19,5 +19,10 @@
     <acme:input-textbox code="learner.followup.form.label.automaticSequenceNumber" path="automaticSequenceNumber"/>	
 	<acme:input-textbox code="learner.followup.form.label.instantiationMoment" path="instantiationMoment"/>	
 	<acme:input-textbox code="learner.followup.form.label.message" path="message"/>	
-	<acme:input-textbox code="learner.followup.form.label.link" path="link"/>	
+	<acme:input-textbox code="learner.followup.form.label.link" path="link"/>
+	
+	<jstl:if test="${command == 'create'}">
+		<acme:input-checkbox code="learner.followup.form.checkbox.confirm" path="confirm"/>
+		<acme:submit code="learner.followup.form.button.create" action="/learner/follow-up/create?masterId=${masterId}"/>
+	</jstl:if>	
 </acme:form>

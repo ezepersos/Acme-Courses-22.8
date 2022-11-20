@@ -51,28 +51,5 @@
 			<acme:submit code="learner.helpRequest.form.button.create" action="/learner/help-request/create"/>
 		</jstl:when>		
 	</jstl:choose>
-</acme:form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<acme:form>
-	
-
-	
+	<acme:button code="learner.followUp.form.button.create" action="/learner/follow-up/create?masterId=${id}"/>
 </acme:form>
