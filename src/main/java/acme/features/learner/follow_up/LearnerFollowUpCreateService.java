@@ -53,8 +53,7 @@ public class LearnerFollowUpCreateService implements AbstractCreateService<Learn
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "message", "link");
-		
+		request.unbind(entity, model, "instantiationMoment", "message", "link", "automaticSequenceNumber");
 		model.setAttribute(this.MASTERID, request.getModel().getAttribute(this.MASTERID));
 
 	}

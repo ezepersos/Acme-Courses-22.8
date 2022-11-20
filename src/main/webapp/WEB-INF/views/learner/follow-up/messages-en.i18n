@@ -14,7 +14,6 @@ learner.followup.form.label.message = Message
 learner.followup.form.label.link = Link
 learner.followup.form.checkbox.confirm = Confirm
 learner.followup.form.button.create = Create
-
 learner.followUp.form.error.spam = This field contains spam words
 learner.followUp.form.error.must-confirm = You must confirm before create
 
