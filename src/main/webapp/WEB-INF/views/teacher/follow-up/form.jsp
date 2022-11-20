@@ -15,9 +15,16 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
-<acme:form readonly="true">
-  <acme:input-textbox code="teacher.followup.form.label.automaticSequenceNumber" path="automaticSequenceNumber"/>	
-	<acme:input-textbox code="teacher.followup.form.label.instantiationMoment" path="instantiationMoment"/>	
+<acme:form>
+<jstl:if test="${acme:anyOf(command, 'show')}">
+    <acme:input-textbox code="teacher.followup.list.label.automaticSequenceNumber" path="automaticSequenceNumber"/>	
+	<acme:input-textbox code="teacher.followup.list.label.instantiationMoment" path="instantiationMoment"/>	
+</jstl:if>
 	<acme:input-textbox code="teacher.followup.form.label.message" path="message"/>	
 	<acme:input-textbox code="teacher.followup.form.label.link" path="link"/>	
+	
+		<jstl:if test="${command == 'create'}">
+		<acme:input-checkbox code="teacher.followup.form.checkbox.confirm" path="confirm"/>
+		<acme:submit code="teacher.followup.form.button.create" action="/teacher/follow-up/create?masterId=${masterId}"/>
+	</jstl:if>
 </acme:form>

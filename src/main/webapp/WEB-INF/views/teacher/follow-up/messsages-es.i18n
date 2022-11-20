@@ -17,3 +17,9 @@ teacher.followup.list.label.automaticSequenceNumber = Número de secuencia autom
 teacher.followup.list.label.instantiationMoment = Momento de la instanciación
 teacher.followup.list.label.message = Mensaje
 teacher.followup.list.label.link = Link
+
+teacher.followup.form.error.message = El mensaje no puede contener palabras que sean consideradas spam.
+teacher.followup.form.error.link = El link no puede contener palabras que sean consideradas spam.
+teacher.followup.form.button.create = Crear
+teacher.followup.form.checkbox.confirm = Soy consciente de que este reporte de patrocinio no puede ser borrado ni editado tras su creación
+teacher.followup.form.error.must-confirm = Debes confirmar este campo

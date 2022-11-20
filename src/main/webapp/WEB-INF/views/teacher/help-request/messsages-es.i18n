@@ -25,3 +25,6 @@ teacher.helpRequest.list.label.startTime = Fecha inicio
 teacher.helpRequest.list.label.creationTime = Fecha creación
 teacher.helpRequest.list.label.endingTime = Fecha finalización
 teacher.helpRequest.list.label.link = Enlace
+
+teacher.followup.form.button.create = Crear seguimiento
+teacher.helprequest.form.button.learner = Mostrar estudiante
