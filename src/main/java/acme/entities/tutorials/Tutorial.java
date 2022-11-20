@@ -49,6 +49,8 @@ public class Tutorial extends AbstractEntity {
 
 	@NotNull
 	protected TutorialType tutorialType;
+	
+	protected boolean isPublished;
 
 	// Relations -------------------------------------------------------------
 	

@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.systemConfigurations.SystemConfiguration;
 import acme.entities.tutorials.Tutorial;
+import acme.entities.tutorials.TutorialType;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
@@ -20,9 +21,6 @@ import acme.utils.SpamFilterService;
 public class TeacherTheoryCreateService implements AbstractCreateService<Teacher, Tutorial> {
 
 		// Internal state ---------------------------------------------------------
-		
-		private final String RETAIL_PRICE = "retailPrice";
-		private final String DESCRIPTION = "description";
 
 		@Autowired
 		protected TeacherTutorialRepository repository;
@@ -50,20 +48,30 @@ public class TeacherTheoryCreateService implements AbstractCreateService<Teacher
 			final String acceptedCurrencies = configurationColl.get(0).getAcceptedCurrencies();
 			final List<String> currencies = Arrays.asList(acceptedCurrencies.split(";"));
 			
-			if(!errors.hasErrors(this.RETAIL_PRICE)) {
+			if (!errors.hasErrors("ticker")) {
+				Tutorial existing;
+
+				existing = this.repository.findTutorialByTicker(entity.getTicker());
+				errors.state(request, existing == null, "ticker", "teacher.tutorial.form.error.duplicated");
+			}
+			if(!errors.hasErrors("cost")) {
 				errors.state(request, !(!currencies.contains(entity.getCost().getCurrency()) || entity.getCost().getCurrency() == null ||
 					entity.getCost().getCurrency().length() == 0),
-					this.RETAIL_PRICE, "inventor.item.form.error.incorrectCurrency");
+					"cost", "teacher.tutorial.form.error.incorrectCurrency");
 				errors.state(request, !(entity.getCost().getAmount() <= 0.0 || entity.getCost().getAmount() == null),
-					this.RETAIL_PRICE, "inventor.item.form.error.incorrectQuantity");
+					"cost", "teacher.tutorial.form.error.incorrectQuantity");
 			}
 			
-			if(!errors.hasErrors(this.DESCRIPTION)) {
-				errors.state(request, !this.spamFilterService.isSpam(entity.getTicker()), this.DESCRIPTION, "inventor.item.form.error.spam");
+			if(!errors.hasErrors("abstractTheory")) {
+				errors.state(request, !this.spamFilterService.isSpam(entity.getAbstractTheory()), "abstractTheory", "teacher.tutorial.form.error.spam");
 			}
 			
-			if(!errors.hasErrors("name")) {
-				errors.state(request, !this.spamFilterService.isSpam(entity.getTitle()), "name", "inventor.item.form.error.spam");
+			if(!errors.hasErrors("title")) {
+				errors.state(request, !this.spamFilterService.isSpam(entity.getTitle()), "title", "teacher.tutorial.form.error.spam");
+			}
+			
+			if(!errors.hasErrors("link")) {
+				errors.state(request, !this.spamFilterService.isSpam(entity.getLink()), "link", "teacher.tutorial.form.error.spam");
 			}
 
 		}
@@ -74,8 +82,8 @@ public class TeacherTheoryCreateService implements AbstractCreateService<Teacher
 			assert entity != null;
 			assert errors != null;
 
-			request.bind(entity, errors, "code");
-			request.bind(entity, errors, "name", "code", "technology", this.DESCRIPTION, this.RETAIL_PRICE, "link");
+			request.bind(entity, errors, "ticker");
+			request.bind(entity, errors, "title", "abstractTheory", "cost", "link");
 			
 		}
 
@@ -85,7 +93,7 @@ public class TeacherTheoryCreateService implements AbstractCreateService<Teacher
 			assert entity != null;
 			assert model != null;
 
-			request.unbind(entity, model, "name", "code", "technology", this.DESCRIPTION, this.RETAIL_PRICE, "link", "itemType", "isPublished");
+			request.unbind(entity, model, "title","ticker", "abstractTheory", "cost", "link", "tutorialType", "isPublished");
 		}
 
 		@Override
@@ -93,13 +101,13 @@ public class TeacherTheoryCreateService implements AbstractCreateService<Teacher
 			assert request != null;
 
 			final Tutorial result;
-			final Teacher inventor;
+			final Teacher teacher;
 
-//			inventor = this.repository.find(request.getPrincipal().getActiveRoleId());
-//			result = new Item();
-//			result.setPublished(false);
-//			result.setInventor(inventor);
-//			result.setItemType(ItemType.COMPONENT);
+			teacher = this.repository.findTeacher(request.getPrincipal().getActiveRoleId());
+			result = new Tutorial();
+			result.setPublished(false);
+			result.setTeacher(teacher);
+			result.setTutorialType(TutorialType.THEORY);
 
 			return result;
 		}

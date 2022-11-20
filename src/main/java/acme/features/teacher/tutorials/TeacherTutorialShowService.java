@@ -47,9 +47,9 @@ public class TeacherTutorialShowService implements AbstractShowService<Teacher, 
 		id = request.getModel().getInteger("id");
 
 		if (request.getModel().hasAttribute("courseId")) {
-			final List<Integer> toolkits = this.repository.findAllCoursesByTeacherId(principal.getActiveRoleId()).stream().map(AbstractEntity::getId).collect(Collectors.toList());
+			final List<Integer> courses = this.repository.findAllCoursesByTeacherId(principal.getActiveRoleId()).stream().map(AbstractEntity::getId).collect(Collectors.toList());
 			id = request.getModel().getInteger("courseId");
-			if (!toolkits.contains(id)) {
+			if (!courses.contains(id)) {
 				return false;
 			}
 		}

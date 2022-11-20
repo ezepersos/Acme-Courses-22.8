@@ -15,10 +15,23 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
-<acme:form readonly="true">
+<acme:form>
 	<acme:input-textbox code="teacher.tutorial.form.label.title" path="title"/>	
 	<acme:input-textbox code="teacher.tutorial.form.label.ticker" path="ticker"/>	
 	<acme:input-textbox code="teacher.tutorial.form.label.abstractTheory" path="abstractTheory"/>
 	<acme:input-money code="teacher.tutorial.form.label.cost" path="cost"/>
 	<acme:input-textbox code="teacher.tutorial.form.label.link" path="link"/>
+	<jstl:choose>	 
+		<jstl:when test="${acme:anyOf(command, 'show, update, delete, publish') && isPublished == false}">
+			<acme:submit code="teacher.tutorial.form.button.update" action="/teacher/tutorial/update"/>
+			<acme:submit code="teacher.tutorial.form.button.delete" action="/teacher/tutorial/delete"/>
+			<acme:submit code="teacher.tutorial.form.button.publish" action="/teacher/tutorial/publish"/>
+		</jstl:when>
+		<jstl:when test="${acme:anyOf(command, 'create-theory')}">
+			<acme:submit code="teacher.tutorial.form.button.create" action="/teacher/tutorial/create-theory"/>
+		</jstl:when>		
+		<jstl:when test="${acme:anyOf(command, 'create-lab')}">
+			<acme:submit code="teacher.tutorial.form.button.create" action="/teacher/tutorial/create-lab"/>
+		</jstl:when>
+	</jstl:choose>
 </acme:form>
