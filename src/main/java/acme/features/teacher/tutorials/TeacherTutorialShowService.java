@@ -68,7 +68,7 @@ public class TeacherTutorialShowService implements AbstractShowService<Teacher, 
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "ticker", "abstractTheory", "cost", "link");
+		request.unbind(entity, model, "title", "ticker", "abstractTheory", "cost", "link", "isPublished");
 	}
 
 	@Override

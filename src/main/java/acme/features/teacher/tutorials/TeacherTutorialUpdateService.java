@@ -66,7 +66,7 @@ public class TeacherTutorialUpdateService implements AbstractUpdateService<Teach
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors, "title","ticker", "abstractTheory", "cost", "link", "isPublished");
+		request.bind(entity, errors, "title","ticker", "abstractTheory", "cost", "link");
 	}
 
 	@Override

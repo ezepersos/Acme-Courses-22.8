@@ -40,6 +40,9 @@ public class TeacherTutorialController extends AbstractController<Teacher, Tutor
 	protected TeacherTheoryCreateService	createTheoryService;
 	
 	@Autowired
+	protected TeacherLabCreateService	createLabService;
+	
+	@Autowired
 	protected TeacherTutorialUpdateService	updateService;
 	
 	@Autowired
@@ -58,6 +61,7 @@ public class TeacherTutorialController extends AbstractController<Teacher, Tutor
 		super.addCommand("list-theory","list", this.listTheoryService);
 		super.addCommand("show", this.showService);
 		super.addCommand("create-theory", "create", this.createTheoryService);
+		super.addCommand("create-lab", "create", this.createLabService);
 		super.addCommand("delete", this.deleteService);
 		super.addCommand("update", this.updateService);
 		super.addCommand("publish", "update", this.publishService);
