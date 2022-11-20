@@ -1,0 +1,14 @@
+# i18n-en.i18n
+
+
+administrator.post.form.label.caption = Caption
+administrator.post.form.label.message = Message
+administrator.post.form.label.informational = Informational?
+administrator.post.form.label.url = Url
+administrator.post.form.button.create = Create Post
+
+administrator.post.form.error.caption = The caption cannot contain words considered as spam by the system.
+administrator.post.form.error.message = The message cannot contain words considered as spam by the system.
+administrator.post.form.error.url = The url cannot contain words considered as spam by the system.
+administrator.post.form.label.confirm = I am aware that once published, this announcement cannot be modified or deleted.
+
