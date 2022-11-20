@@ -23,5 +23,12 @@
 	<acme:input-textbox code="teacher.helpRequest.form.label.startTime" path="startTime"/>	
 	<acme:input-textbox code="teacher.helpRequest.form.label.creationTime" path="creationTime"/>	
 	<acme:input-textbox code="teacher.helpRequest.form.label.endingTime" path="endingTime"/>	
-	<acme:input-textbox code="teacher.helpRequest.form.label.link" path="link"/>	
+	<acme:input-textbox code="teacher.helpRequest.form.label.link" path="link"/>
+	
+	<br/>
+
+	<jstl:if test="${statusStr == 'PROPOSED'}">
+			<acme:submit code="teacher.helpRequest.form.label.accept" action="/teacher/help-request/accept"/>
+			<acme:submit code="teacher.helpRequest.form.label.deny" action="/teacher/help-request/deny"/>
+	</jstl:if>	
 </acme:form>

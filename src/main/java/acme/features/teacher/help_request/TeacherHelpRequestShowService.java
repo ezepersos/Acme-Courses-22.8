@@ -44,6 +44,7 @@ public class TeacherHelpRequestShowService implements AbstractShowService<Teache
 		assert entity != null;
 		assert model != null;
 		
+		model.setAttribute("statusStr", entity.getStatus().toString());
 		request.unbind(entity, model, "status", "ticker", "statement", "budget", "startTime", "creationTime", "endingTime", "link");
 		
 	}
