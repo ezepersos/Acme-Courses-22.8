@@ -16,6 +16,7 @@ learner.helpRequest.form.label.startTime = Fecha inicio
 learner.helpRequest.form.label.creationTime = Fecha creación
 learner.helpRequest.form.label.endingTime = Fecha finalización
 learner.helpRequest.form.label.link = Enlace
+learner.followUp.form.button.create = Crear seguimiento
 
 learner.helpRequest.list.label.status = Estado
 learner.helpRequest.list.label.ticker = Marcador

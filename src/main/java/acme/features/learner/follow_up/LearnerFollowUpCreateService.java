@@ -13,6 +13,7 @@ import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractCreateService;
 import acme.roles.Learner;
+import acme.utils.SpamFilterService;
 
 @Service
 public class LearnerFollowUpCreateService implements AbstractCreateService<Learner, FollowUp> {
@@ -24,8 +25,8 @@ public class LearnerFollowUpCreateService implements AbstractCreateService<Learn
 	@Autowired
 	protected LearnerFollowUpRepository repository;
 
-	//@Autowired
-	//protected SpamFilterService spamFilterService;
+	@Autowired
+	protected SpamFilterService spamFilterService;
 
 	// AbstractCreateService<Authenticated, Consumer> ---------------------------
 
@@ -43,7 +44,7 @@ public class LearnerFollowUpCreateService implements AbstractCreateService<Learn
 		assert entity != null;
 		assert errors != null;
 		
-		request.bind(entity, errors, "instantiationMoment", "message", "link", "automaticSequenceNumber");
+		request.bind(entity, errors, "message", "link");
 	}
 
 	@Override
@@ -52,7 +53,7 @@ public class LearnerFollowUpCreateService implements AbstractCreateService<Learn
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "instantiationMoment", "message", "link", "automaticSequenceNumber");
+		request.unbind(entity, model, "message", "link");
 		
 		model.setAttribute(this.MASTERID, request.getModel().getAttribute(this.MASTERID));
 
@@ -78,15 +79,15 @@ public class LearnerFollowUpCreateService implements AbstractCreateService<Learn
 		assert entity != null;
 		assert errors != null;
 
-//		if(this.spamFilterService.isSpam(entity.getMemorandum())) {
-//			errors.state(request, false, this.MEMORANDUM, "inventor.patronageReport.form.error.memorandum");
-//		}
-//
-//		if(this.spamFilterService.isSpam(entity.getLink())) {
-//			errors.state(request, false, "link", "inventor.patronageReport.form.error.link");
-//		}
+		if(this.spamFilterService.isSpam(entity.getMessage())) {
+			errors.state(request, false, "message", "learner.followUp.form.error.spam");
+		}
+
+		if(this.spamFilterService.isSpam(entity.getLink())) {
+			errors.state(request, false, "link", "learner.followUp.form.error.spam");
+		}
 		
-		errors.state(request, request.getModel().getBoolean("confirm"), "confirm", "inventor.patronageReport.form.error.must-confirm");
+		errors.state(request, request.getModel().getBoolean("confirm"), "confirm", "learner.followUp.form.error.must-confirm");
 
 	}
 

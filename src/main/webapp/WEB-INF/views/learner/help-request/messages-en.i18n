@@ -16,6 +16,7 @@ learner.helpRequest.form.label.startTime = Start time
 learner.helpRequest.form.label.creationTime = Creation Time
 learner.helpRequest.form.label.endingTime = Ending time
 learner.helpRequest.form.label.link = Link
+learner.followUp.form.button.create = Create follow up
 
 learner.helpRequest.list.label.status = Status
 learner.helpRequest.list.label.ticker = Ticker
