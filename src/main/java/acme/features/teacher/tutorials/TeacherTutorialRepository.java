@@ -18,6 +18,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.entities.courses.Course;
+import acme.entities.systemConfigurations.SystemConfiguration;
 import acme.entities.tutorials.Tutorial;
 import acme.framework.repositories.AbstractRepository;
 
@@ -39,4 +40,7 @@ public interface TeacherTutorialRepository extends AbstractRepository {
 	@Query("select distinct q.course from Quantity q where q.course.teacher.id = :teacherId")
 	Collection<Course> findAllCoursesByTeacherId(int teacherId);
 	
+	@Query("select sc from SystemConfiguration sc")
+	Collection<SystemConfiguration> findAllConfigurations();
+
 }
