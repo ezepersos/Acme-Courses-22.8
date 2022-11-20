@@ -20,11 +20,19 @@ public class TeacherHelpRequestController extends AbstractController<Teacher, He
 	@Autowired
 	protected TeacherHelpRequestShowService showService;
 	
+	@Autowired
+	protected TeacherHelpRequestAcceptService acceptService;
+	
+	@Autowired
+	protected TeacherHelpRequestDenyService denyService;
+	
 	// Constructors
 	
 	@PostConstruct
 	protected void initialise() {
 		super.addCommand("list", this.listService);
 		super.addCommand("show", this.showService);
+		super.addCommand("accept", "update", this.acceptService);
+		super.addCommand("deny", "update", this.denyService);
 	}
 }

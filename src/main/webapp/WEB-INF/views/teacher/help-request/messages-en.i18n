@@ -16,6 +16,8 @@ teacher.helpRequest.form.label.startTime = Start time
 teacher.helpRequest.form.label.creationTime = Creation Time
 teacher.helpRequest.form.label.endingTime = Ending time
 teacher.helpRequest.form.label.link = Link
+teacher.helpRequest.form.label.accept = Accept
+teacher.helpRequest.form.label.deny = Deny
 
 teacher.helpRequest.list.label.status = Status
 teacher.helpRequest.list.label.ticker = Ticker

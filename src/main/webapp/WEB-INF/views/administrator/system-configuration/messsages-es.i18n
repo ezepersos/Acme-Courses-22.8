@@ -13,5 +13,7 @@ administrator.configuration.form.title.general-indicators = Monedas
 
 administrator.configuration.form.label.system-currency = Moneda del sistema
 administrator.configuration.form.label.accepted-currencies = Monedas aceptadas
-
+administrator.configuration.form.label.spamRecords = Palabras spam
+administrator.configuration.form.label.spamThreshold = Umbral spam
+administrator.configuration.form.label.spamBoosterFactor = Factor de amplificación de spam
 

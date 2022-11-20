@@ -13,3 +13,14 @@ any.blink.list.label.caption = Título
 any.blink.list.label.authorAlias = Alias del Autor
 any.blink.list.label.message = Mensaje
 any.blink.list.label.email = Email
+
+any.chirp.form.label.caption = Título
+any.chirp.form.label.authorAlias = Alias del autor
+any.chirp.form.label.message = Mensaje
+any.chirp.form.label.email = Email
+any.chirp.form.label.confirm = Soy consciente de que este mensaje no puede ser borrado ni editado tras su creación
+
+any.chirp.form.button.create = Crear mensaje
+
+any.chirp.form.error.spam = Este campo contiene spam
+any.chirp.form.error.must-confirm = Debes confirmar este campo
