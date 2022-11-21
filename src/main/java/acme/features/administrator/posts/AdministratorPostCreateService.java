@@ -30,7 +30,7 @@ public class AdministratorPostCreateService implements AbstractCreateService<Adm
 
 	// Internal state ---------------------------------------------------------
 	
-	private final String CAPTION = "caption";
+	private static String CAPTION = "caption";
 
 	@Autowired
 	protected AdministratorPostRepository	repository;
@@ -53,7 +53,7 @@ public class AdministratorPostCreateService implements AbstractCreateService<Adm
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		request.bind(entity, errors, this.CAPTION, "message", "informational", "url");
+		request.bind(entity, errors, AdministratorPostCreateService.CAPTION, "message", "informational", "url");
 
 	}
 
@@ -62,7 +62,7 @@ public class AdministratorPostCreateService implements AbstractCreateService<Adm
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		request.unbind(entity, model, this.CAPTION, "message", "informational", "url");
+		request.unbind(entity, model, AdministratorPostCreateService.CAPTION, "message", "informational", "url");
 
 	}
 
@@ -80,7 +80,7 @@ public class AdministratorPostCreateService implements AbstractCreateService<Adm
 		assert entity != null;
 		assert errors != null;
 
-		errors.state(request, !this.spamFilterService.isSpam(entity.getCaption()), this.CAPTION, "administrator.post.form.error.caption");
+		errors.state(request, !this.spamFilterService.isSpam(entity.getCaption()), AdministratorPostCreateService.CAPTION, "administrator.post.form.error.caption");
 		errors.state(request, !this.spamFilterService.isSpam(entity.getMessage()), "message", "administrator.post.form.error.message");
 		errors.state(request, !this.spamFilterService.isSpam(entity.getUrl()), "url", "administrator.post.form.error.url");
 		errors.state(request, request.getModel().getBoolean("confirm"), "confirm", "any.blink.form.error.must-confirm");

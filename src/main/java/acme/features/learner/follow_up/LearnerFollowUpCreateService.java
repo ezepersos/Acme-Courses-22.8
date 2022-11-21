@@ -20,7 +20,7 @@ public class LearnerFollowUpCreateService implements AbstractCreateService<Learn
 
 	// Internal state ---------------------------------------------------------
 	
-	private final String MASTERID = "masterId";
+	private static String MASTERID = "masterId";
 
 	@Autowired
 	protected LearnerFollowUpRepository repository;
@@ -54,7 +54,7 @@ public class LearnerFollowUpCreateService implements AbstractCreateService<Learn
 		assert model != null;
 
 		request.unbind(entity, model, "instantiationMoment", "message", "link", "automaticSequenceNumber");
-		model.setAttribute(this.MASTERID, request.getModel().getAttribute(this.MASTERID));
+		model.setAttribute(LearnerFollowUpCreateService.MASTERID, request.getModel().getAttribute(LearnerFollowUpCreateService.MASTERID));
 
 	}
 
@@ -64,7 +64,7 @@ public class LearnerFollowUpCreateService implements AbstractCreateService<Learn
 		int helpRequestId;
 		HelpRequest helpRequest;
 		final FollowUp result = new FollowUp();
-		helpRequestId = request.getModel().getInteger(this.MASTERID);
+		helpRequestId = request.getModel().getInteger(LearnerFollowUpCreateService.MASTERID);
 		helpRequest = this.repository.findHelpRequestById(helpRequestId);
 		result.setInstantiationMoment(Date.from(Instant.now()));
 		result.setHelpRequest(helpRequest);

@@ -21,16 +21,13 @@ public class TeacherTutorialPublishService implements AbstractUpdateService<Teac
 
 	// Internal state ---------------------------------------------------------
 	
-	private final String DESCRIPTION = "description";
-	private final String RETAIL_PRICE = "retailPrice";
-
 	@Autowired
 	protected TeacherTutorialRepository repository;
 	
 	@Autowired
 	protected SpamFilterService spamFilterService;
 
-	// AbstractUpdateService<Inventor, Item> interface ---------------------------
+	// AbstractUpdateService<Teacher, Tutorial> interface ---------------------------
 
 
 	@Override

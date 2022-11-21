@@ -25,7 +25,7 @@ public class AdministratorSystemConfigurationUpdateService implements AbstractUp
 	@Autowired
 	protected SpamFilterService spamFilterService;
 
-	// AbstractUpdateService<Inventor, Item> interface ---------------------------
+	// AbstractUpdateService<Administrator, SystemConfiguration> interface ---------------------------
 
 	@Override
 	public boolean authorise(final Request<SystemConfiguration> request) {

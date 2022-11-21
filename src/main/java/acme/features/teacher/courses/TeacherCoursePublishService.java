@@ -25,17 +25,15 @@ public class TeacherCoursePublishService implements AbstractUpdateService<Teache
 	@Autowired
 	protected TeacherCourseRepository repository;
 
-	// AbstractUpdateService<Inventor, Item> interface ---------------------------
+	// AbstractUpdateService<Teacher, Course> interface ---------------------------
 
 
 	@Override
 	public boolean authorise(final Request<Course> request) {
 		assert request != null;
 
-		final boolean result;
 		final int id;
 		final Course course;
-		final Teacher teacher;
 		
 		id = request.getModel().getInteger("id");
 		course = this.repository.findCourseById(id);

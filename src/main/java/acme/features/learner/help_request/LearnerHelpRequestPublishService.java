@@ -103,8 +103,7 @@ public class LearnerHelpRequestPublishService implements AbstractUpdateService<L
 			errors.state(request, (startTime.after(creationDateAfterMonth)), "startTime", "learner.helprequest.form.error.creationDateAfterMonth");
 		}
 
-		if (!errors.hasErrors("endTime")) {
-			if (entity.getStartTime() != null) {
+		if (!errors.hasErrors("endTime") && entity.getStartTime() != null) {
 				final Date startTime = entity.getStartTime();
 				final Calendar calStart = Calendar.getInstance();
 				calStart.setTime(startTime);
@@ -114,7 +113,6 @@ public class LearnerHelpRequestPublishService implements AbstractUpdateService<L
 				final Date endingTime = entity.getEndingTime();
 
 				errors.state(request, (endingTime.after(startDateAfterMonth)), "endingTime", "learner.helprequest.form.error.startDateAfterMonth");
-			}
 		}
 
 	}

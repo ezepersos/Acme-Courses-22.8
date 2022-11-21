@@ -56,8 +56,8 @@ public class LearnerHelpRequestDeleteService implements AbstractDeleteService<Le
 			assert entity != null;
 			assert model != null;
 			
-			model.setAttribute("inventors", this.repository.findTeachers());
-			request.unbind(entity, model, "status", "code", "legalStuff", "budget", "startTime", "creationTime", "endingTime", "link", "inventor", "isPublished", "inventors");
+			model.setAttribute("teachers", this.repository.findTeachers());
+			request.unbind(entity, model, "status", "code", "legalStuff", "budget", "startTime", "creationTime", "endingTime", "link", "teacher", "isPublished", "teachers");
 		}
 
 		@Override

@@ -1,6 +1,6 @@
 # i18n-en.i18n
 
-authenticated.inventor.inventor.form.title.create = Become an inventor
+authenticated.teacher.teacher.form.title.create = Become a teacher
 
 authenticated.learner.form.label.school = Escuela
 authenticated.learner.form.label.statement = Declaración

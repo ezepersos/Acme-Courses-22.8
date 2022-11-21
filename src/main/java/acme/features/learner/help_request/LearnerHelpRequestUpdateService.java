@@ -24,7 +24,7 @@ public class LearnerHelpRequestUpdateService implements AbstractUpdateService<Le
 			@Autowired
 			protected LearnerHelpRequestRepository repository;
 
-			// AbstractUpdateService<Inventor, Item> interface ---------------------------
+			// AbstractUpdateService<Learner, HelpRequest> interface ---------------------------
 
 
 			@Override
@@ -106,8 +106,7 @@ public class LearnerHelpRequestUpdateService implements AbstractUpdateService<Le
 						"startTime", "learner.helprequest.form.error.creationDateAfterMonth");
 				}
 				
-				if(!errors.hasErrors("endTime")) {
-					if(entity.getStartTime() != null) {
+				if(!errors.hasErrors("endTime") && entity.getStartTime() != null) {
 						final Date startTime = entity.getStartTime();
 						final Calendar calStart = Calendar.getInstance();
 						calStart.setTime(startTime);
@@ -118,7 +117,6 @@ public class LearnerHelpRequestUpdateService implements AbstractUpdateService<Le
 						
 						errors.state(request, (endingTime.after(startDateAfterMonth)),
 							"endingTime", "learner.helprequest.form.error.startDateAfterMonth");
-					}		
 				}
 
 			}
