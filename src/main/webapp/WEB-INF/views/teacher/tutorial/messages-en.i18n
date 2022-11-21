@@ -13,9 +13,20 @@ teacher.tutorial.form.label.ticker = Ticker
 teacher.tutorial.form.label.abstractTheory = Abstract Theory
 teacher.tutorial.form.label.cost = Cost
 teacher.tutorial.form.label.link = Link
+teacher.tutorial.form.button.update = Update
+teacher.tutorial.form.button.delete = Delete
+teacher.tutorial.form.button.publish = Publish
+teacher.tutorial.form.button.create = Create
 
 teacher.tutorial.list.label.title = Title
 teacher.tutorial.list.label.ticker = Ticker
 teacher.tutorial.list.label.abstractTheory = Abstract Theory
 teacher.tutorial.list.label.cost = Cost
 teacher.tutorial.list.label.link = Link
+teacher.tutorial.theory.list.button.create = Create theory tutorial
+teacher.tutorial.lab.list.button.create = Create lab tutorial
+
+teacher.tutorial.form.error.incorrectQuantity = The quantity must be more than 0
+teacher.tutorial.form.error.incorrectCurrency = This currency is not allowed
+teacher.tutorial.form.error.spam = This field contains spam words
+teacher.tutorial.form.error.duplicated = This ticker is duplicated

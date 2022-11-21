@@ -13,9 +13,20 @@ teacher.tutorial.form.label.ticker = Marcador
 teacher.tutorial.form.label.abstractTheory = Resumen general
 teacher.tutorial.form.label.cost = Coste
 teacher.tutorial.form.label.link = Enlace
+teacher.tutorial.form.button.update = Actualizar
+teacher.tutorial.form.button.delete = Borrar
+teacher.tutorial.form.button.publish = Publicar
+teacher.tutorial.form.button.create = Crear
 
 teacher.tutorial.list.label.title = Título
 teacher.tutorial.list.label.ticker = Marcador
 teacher.tutorial.list.label.abstractTheory = Resumen general
 teacher.tutorial.list.label.cost = Coste
 teacher.tutorial.list.label.link = Enlace
+teacher.tutorial.theory.list.button.create = Crear tutorial teoría
+teacher.tutorial.lab.list.button.create = Crear tutorial laboratorio
+
+teacher.tutorial.form.error.incorrectQuantity = La cantidad debe ser mayor que 0
+teacher.tutorial.form.error.incorrectCurrency = Esta divisa no está permitida
+teacher.tutorial.form.error.spam = Este campo contiene palabras spam
+teacher.tutorial.form.error.duplicated = Este ticker está duplicado

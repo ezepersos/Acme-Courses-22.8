@@ -22,5 +22,10 @@
 	<acme:list-column code="teacher.tutorial.list.label.cost" path="cost" width="10%"/>
 	<acme:list-column code="teacher.tutorial.list.label.link" path="link" width="10%"/>
 </acme:list>
-
+<jstl:if test="${acme:anyOf(command, 'list-theory')}">
+	<acme:button code="teacher.tutorial.theory.list.button.create" action="/teacher/tutorial/create-theory"/>
+</jstl:if>	
+<jstl:if test="${acme:anyOf(command, 'list-lab')}">
+	<acme:button code="teacher.tutorial.lab.list.button.create" action="/teacher/tutorial/create-lab"/>
+</jstl:if>
 
