@@ -28,6 +28,9 @@ public class AdministratorSystemConfigController extends AbstractController<Admi
 
 	@Autowired
 	protected AdministratorSystemConfigShowService	showService;
+	
+	@Autowired
+	protected AdministratorSystemConfigurationUpdateService updateService;
 
 
 	// Constructors -----------------------------------------------------------
@@ -36,5 +39,6 @@ public class AdministratorSystemConfigController extends AbstractController<Admi
 	@PostConstruct
 	protected void initialise() {
 		super.addCommand("show", this.showService);
+		super.addCommand("update", this.updateService);
 	}
 }
