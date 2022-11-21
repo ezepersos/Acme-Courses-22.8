@@ -14,9 +14,10 @@ public class TeacherFollowUpCreateTest extends TestHarness{
 	public void positiveTest (final int recordIndex,final String automaticSequenceNumber, final String instantiationMoment, final String message, final String link ) {
 		
 		super.signIn("teacher1", "teacher1");
-		super.clickOnMenu("Teacher", "List follow-ups");
+		super.clickOnMenu("Teacher", "List help requests");
 		super.checkListingExists();
 		super.clickOnListingRecord(0);
+		super.clickOnButton("Create follow up");
 		super.checkFormExists();
 		super.fillInputBoxIn("message", message);
 		super.fillInputBoxIn("link", link);
@@ -28,9 +29,7 @@ public class TeacherFollowUpCreateTest extends TestHarness{
 		super.navigateHome();
 		super.clickOnMenu("Teacher", "List follow-ups");
 		super.checkListingExists();
-		super.sortListing(0, "asc");
-		super.checkColumnHasValue(recordIndex, 0, automaticSequenceNumber);
-		super.checkColumnHasValue(recordIndex, 1, instantiationMoment);
+		super.sortListing(1, "desc");
 		super.checkColumnHasValue(recordIndex, 2, message);
 		super.checkColumnHasValue(recordIndex, 3, link);
 		super.signOut();
@@ -45,30 +44,12 @@ public class TeacherFollowUpCreateTest extends TestHarness{
 		super.clickOnMenu("Teacher", "List help requests");
 		super.checkListingExists();
 		super.clickOnListingRecord(0);
+		super.clickOnButton("Create follow up");
 		super.checkFormExists();
 
 		super.fillInputBoxIn("message", message);
 		super.fillInputBoxIn("link", link);
 		super.fillInputBoxIn("confirm", "true");
-		super.clickOnSubmit("Create follow up");
-
-		super.checkErrorsExist();
-
-		super.signOut();
-	}
-	@ParameterizedTest
-	@CsvFileSource(resources = "/teacher/follow-up/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(20)
-	public void negativeTest2(final int recordIndex,final String automaticSequenceNumber, final String instantiationMoment, final String message, final String link ) {
-
-		super.signIn("teacher1", "teacher1");
-		super.clickOnMenu("Teacher", "List help requests");
-		super.checkListingExists();
-		super.clickOnListingRecord(0);
-		super.checkFormExists();
-
-		super.fillInputBoxIn("message", message);
-		super.fillInputBoxIn("link", link);
 		super.clickOnSubmit("Create follow up");
 
 		super.checkErrorsExist();

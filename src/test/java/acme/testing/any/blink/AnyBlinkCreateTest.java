@@ -18,7 +18,7 @@ public class AnyBlinkCreateTest extends TestHarness{
 		super.checkListingExists();
 		super.clickOnButton("Create blink");
 		super.checkFormExists();
-		super.fillInputBoxIn("caption", message);
+		super.fillInputBoxIn("caption", caption);
 		super.fillInputBoxIn("authorAlias", authorAlias);
 		super.fillInputBoxIn("message", message);
 		super.fillInputBoxIn("email", email);
@@ -30,10 +30,11 @@ public class AnyBlinkCreateTest extends TestHarness{
 		super.navigateHome();
 		super.clickOnMenu("Authenticated", "List blinks");
 		super.checkListingExists();
-		super.sortListing(0, "asc");
+		super.sortListing(0, "desc");
 		super.checkColumnHasValue(recordIndex, 1, caption);
-		super.checkColumnHasValue(recordIndex, 2, message);
-		super.checkColumnHasValue(recordIndex, 3, email);
+		super.checkColumnHasValue(recordIndex, 2, authorAlias);
+		super.checkColumnHasValue(recordIndex, 3, message);
+		super.checkColumnHasValue(recordIndex, 4, email);
 		super.signOut();
 	}
 	
@@ -47,22 +48,12 @@ public class AnyBlinkCreateTest extends TestHarness{
 		super.checkListingExists();
 		super.clickOnButton("Create blink");
 		super.checkFormExists();
-		super.fillInputBoxIn("caption", message);
+		super.fillInputBoxIn("caption", caption);
 		super.fillInputBoxIn("authorAlias", authorAlias);
 		super.fillInputBoxIn("message", message);
 		super.fillInputBoxIn("email", email);
 		super.fillInputBoxIn("confirm", "true");
 		super.clickOnSubmit("Create blink");
-		
-		super.checkNotErrorsExist();
-		
-		super.navigateHome();
-		super.clickOnMenu("Authenticated", "List blinks");
-		super.checkListingExists();
-		super.sortListing(0, "asc");
-		super.checkColumnHasValue(recordIndex, 1, caption);
-		super.checkColumnHasValue(recordIndex, 2, message);
-		super.checkColumnHasValue(recordIndex, 3, email);
 
 		super.checkErrorsExist();
 
