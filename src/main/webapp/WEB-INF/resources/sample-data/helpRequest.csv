@@ -1,6 +1,6 @@
-key,status,ticker,statement,budget,startTime,creationTime,endingTime,link,key:learner,key:teacher,key:tutorial
-helpRequest-01,PROPOSED,HSI-951:AJOWI,statement of help request 01,"USD 20,000.00",2023/01/01 08:00,2022/10/01 08:00,2023/01/05 08:00,"https://www.google.com/",learner-01,teacher-01,tutorial-01
-helpRequest-02,ACCEPTED,HPA-274:SPWOQ,statement of help request 02,"USD 14,000.00",2023/01/02 08:00,2022/10/25 08:00,2023/01/08 08:00,"https://www.google.com/",learner-02,teacher-02,tutorial-02
-helpRequest-03,PROPOSED,SFC-471:ABSPO,statement of help request 03,"USD 4,000.00",2023/01/05 08:00,2022/10/01 08:00,2023/01/08 08:00,"https://www.google.com/",learner-02,teacher-01,tutorial-03
-helpRequest-04,ACCEPTED,POR-960:FJI,statement of help request 04,"USD 16,000.00",2023/01/03 08:00,2022/10/21 08:00,2023/01/15 08:00,"https://www.google.com/",learner-01,teacher-02,tutorial-03
-helpRequest-05,DENIED,JAS-295:AKPSOW,statement of help request 05,"USD 21,000.00",2023/01/23 08:00,2022/10/04 08:00,2023/01/26 08:00,"https://www.google.com/",learner-01,teacher-01,tutorial-05
+key,status,ticker,statement,budget,startTime,creationTime,endingTime,link,isPublished,key:learner,key:teacher,key:tutorial
+helpRequest-01,PROPOSED,HSI-951:AJOWI,statement of help request 01,"USD 20,000.00",2023/01/01 08:00,2022/10/01 08:00,2023/01/05 08:00,"https://www.google.com/",false,learner-01,teacher-01,tutorial-01
+helpRequest-02,ACCEPTED,HPA-274:SPWOQ,statement of help request 02,"USD 14,000.00",2023/01/02 08:00,2022/10/25 08:00,2023/01/08 08:00,"https://www.google.com/",true,learner-02,teacher-02,tutorial-02
+helpRequest-03,PROPOSED,SFC-471:ABSPO,statement of help request 03,"USD 4,000.00",2023/01/05 08:00,2022/10/01 08:00,2023/01/08 08:00,"https://www.google.com/",true,learner-02,teacher-01,tutorial-03
+helpRequest-04,ACCEPTED,POR-960:FJI,statement of help request 04,"USD 16,000.00",2023/01/03 08:00,2022/10/21 08:00,2023/01/15 08:00,"https://www.google.com/",true,learner-01,teacher-02,tutorial-03
+helpRequest-05,DENIED,JAS-295:AKPSOW,statement of help request 05,"USD 21,000.00",2023/01/23 08:00,2022/10/04 08:00,2023/01/26 08:00,"https://www.google.com/",true,learner-01,teacher-01,tutorial-05

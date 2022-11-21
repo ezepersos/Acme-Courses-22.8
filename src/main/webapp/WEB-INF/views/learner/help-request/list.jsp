@@ -25,3 +25,6 @@
 	<acme:list-column code="learner.helpRequest.list.label.endingTime" path="endingTime" width="10%"/>
 	<acme:list-column code="learner.helpRequest.list.label.link" path="link" width="10%"/>
 </acme:list>
+<jstl:if test="${acme:anyOf(command, 'list')}">
+	<acme:button code="learner.helpRequest.list.button.create" action="/learner/help-request/create"/>
+</jstl:if>

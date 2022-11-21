@@ -66,6 +66,8 @@ public class HelpRequest extends AbstractEntity {
 	@URL
 	protected String link;
 	
+	protected boolean isPublished;
+	
 	// Relations -------------------------------------------------------------
 	
 	@NotNull

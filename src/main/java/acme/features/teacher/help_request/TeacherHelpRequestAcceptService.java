@@ -31,7 +31,7 @@ public class TeacherHelpRequestAcceptService implements AbstractUpdateService<Te
 		helpRequestId = request.getModel().getInteger("id");
 		helpRequest = this.repository.findHelpRequestById(helpRequestId);
 		teacher = helpRequest.getTeacher();
-		result = request.isPrincipal(teacher);
+		result = helpRequest.isPublished() && request.isPrincipal(teacher);
 
 		return result;
 	}
@@ -70,7 +70,7 @@ public class TeacherHelpRequestAcceptService implements AbstractUpdateService<Te
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "status", "ticker", "statement", "budget", "startTime", "creationTime", "endingTime", "link");
+		request.unbind(entity, model, "status", "ticker", "statement", "budget", "startTime", "creationTime", "endingTime", "link", "isPublished");
 	}
 
 
