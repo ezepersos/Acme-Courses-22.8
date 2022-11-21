@@ -22,6 +22,6 @@ teacher.followup.list.label.link = Link
 teacher.followup.form.error.message = The message cannot contain words considered as spam by the system.
 teacher.followup.form.error.link = The link cannot contain words considered as spam by the system.
 teacher.followup.form.button.create = Create
-teacher.followup.form.checkbox.confirm = I am aware this patronage report can't be deleted nor modified after its creation
+teacher.followup.form.checkbox.confirm = I am aware this follow up can't be deleted nor modified after its creation
 teacher.followup.form.error.must-confirm = You must confirm this field
 
