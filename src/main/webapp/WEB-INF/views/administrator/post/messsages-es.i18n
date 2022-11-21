@@ -1,0 +1,13 @@
+# i18n-en.i18n
+
+
+administrator.post.form.label.caption = Título
+administrator.post.form.label.message = Mensaje
+administrator.post.form.label.informational = ¿Informativo?
+administrator.post.form.label.url = Enlace
+administrator.post.form.button.create = Crear anuncio
+
+administrator.post.form.error.caption = El título no puede contener spam.
+administrator.post.form.error.message = El mensaje no puede contener spam.
+administrator.post.form.error.url = La url no puede contener spam.
+administrator.post.form.label.confirm = Soy consciente de que una vez que se publique, no se podrá eliminar ni editar.
