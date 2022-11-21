@@ -16,10 +16,10 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="teacher.course.list.label.ticker" path="ticker" width="10%"/>
-	<acme:list-column code="teacher.course.list.label.caption" path="caption" width="20%"/>
-	<acme:list-column code="teacher.course.list.label.abstractCourse" path="abstractCourse" width="30%"/>
-	<acme:list-column code="teacher.course.list.label.link" path="link" width="10%"/>
-	<acme:list-column code="teacher.course.list.label.published" path="isPublished" width="10%"/>
+	<acme:list-column code="teacher.quantity.list.label.title" path="tutorialName" width="25%"/>
+	<acme:list-column code="teacher.quantity.list.label.units" path="units" width="20%"/>
+	<acme:list-column code="teacher.quantity.list.label.type" path="tutorialType" width="20%"/>	
+	<acme:list-column code="teacher.quantity.list.label.abstractTheory" path="tutorialAbstractTheory" width="35%"/>
+
 </acme:list>
-<acme:button code="teacher.course.list.button.create" action="/teacher/course/create"/>
+<acme:button code="teacher.quantity.form.button.create" action="/teacher/quantity/create?courseId=${courseId}"/>
