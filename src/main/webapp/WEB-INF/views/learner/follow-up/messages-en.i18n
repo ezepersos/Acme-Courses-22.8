@@ -12,6 +12,10 @@ learner.followup.form.label.automaticSequenceNumber = Automatic sequence number
 learner.followup.form.label.instantiationMoment = Instantiation moment
 learner.followup.form.label.message = Message
 learner.followup.form.label.link = Link
+learner.followup.form.checkbox.confirm = Confirm
+learner.followup.form.button.create = Create
+learner.followUp.form.error.spam = This field contains spam words
+learner.followUp.form.error.must-confirm = You must confirm before create
 
 learner.followup.list.label.automaticSequenceNumber = Automatic sequence number
 learner.followup.list.label.instantiationMoment = Instantiation moment
