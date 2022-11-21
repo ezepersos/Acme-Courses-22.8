@@ -18,7 +18,7 @@ public class TeacherQuantityDeleteService implements AbstractDeleteService<Teach
 	@Autowired
 	protected TeacherQuantityRepository repository;
 
-	// AbstractDeleteService<Inventor, Item> interface -------------------------
+	// AbstractDeleteService<Teacher, Quantity> interface -------------------------
 
 
 	@Override

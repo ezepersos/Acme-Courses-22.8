@@ -72,8 +72,7 @@ public class LearnerHelpRequestCreateService implements AbstractCreateService<Le
 			errors.state(request, (startTime.after(creationDateAfterMonth)), "startTime", "learner.helpRequest.form.error.creationDateAfter");
 		}
 
-		if (!errors.hasErrors("endTime")) {
-			if (entity.getStartTime() != null) {
+		if (!errors.hasErrors("endTime") && entity.getStartTime() != null) {
 				final Date startTime = entity.getStartTime();
 				final Calendar calStart = Calendar.getInstance();
 				calStart.setTime(startTime);
@@ -83,7 +82,6 @@ public class LearnerHelpRequestCreateService implements AbstractCreateService<Le
 				final Date endingTime = entity.getEndingTime();
 
 				errors.state(request, (endingTime.after(startDateAfterMonth)), "endingTime", "learner.helpRequest.form.error.startDateAfter");
-			}
 		}
 
 	}

@@ -21,7 +21,7 @@ public class TeacherTutorialDeleteService implements AbstractDeleteService<Teach
 	@Autowired
 	protected TeacherTutorialRepository repository;
 
-	// AbstractDeleteService<Inventor, Item> interface -------------------------
+	// AbstractDeleteService<Teacher, Tutorial> interface -------------------------
 
 
 	@Override

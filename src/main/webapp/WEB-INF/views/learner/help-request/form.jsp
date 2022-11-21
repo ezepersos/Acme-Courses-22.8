@@ -23,10 +23,10 @@
 	<acme:input-textbox code="learner.helpRequest.form.label.link" path="link"/>	
 	<jstl:if test="${acme:anyOf(command, 'show, update, delete, publish')}">
 		<acme:input-moment code="learner.helpRequest.form.label.creationTime" path="creationTime" readonly="true"/>
+		<acme:input-textbox code="learner.helpRequest.form.label.status" path="status"/>	
 	</jstl:if>
 	<acme:input-moment code="learner.helpRequest.form.label.startTime" path="startTime"/>	
 	<acme:input-moment code="learner.helpRequest.form.label.endingTime" path="endingTime"/>	
-    <acme:input-textbox code="learner.helpRequest.form.label.status" path="status"/>	
 	<jstl:choose>	 
 		<jstl:when test="${isPublished == true }">
 			<acme:button code="learner.helpRequest.form.button.teacher" action="/any/user-account/show?id=${teacher.userAccount.id}"/>
@@ -51,5 +51,7 @@
 			<acme:submit code="learner.helpRequest.form.button.create" action="/learner/help-request/create"/>
 		</jstl:when>		
 	</jstl:choose>
-	<acme:button code="learner.followUp.form.button.create" action="/learner/follow-up/create?masterId=${id}"/>
+	<jstl:if test="${acme:anyOf(command, 'show')}">
+		<acme:button code="learner.followUp.form.button.create" action="/learner/follow-up/create?masterId=${id}"/>	
+	</jstl:if>
 </acme:form>

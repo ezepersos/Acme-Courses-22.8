@@ -22,7 +22,7 @@ public class TeacherCourseUpdateService implements AbstractUpdateService<Teacher
 	@Autowired
 	protected SpamFilterService spamFilterService;
 
-	// AbstractUpdateService<Inventor, Item> interface ---------------------------
+	// AbstractUpdateService<Teacher, Course> interface ---------------------------
 
 
 	@Override

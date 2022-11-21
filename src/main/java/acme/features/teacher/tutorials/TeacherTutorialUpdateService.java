@@ -27,7 +27,7 @@ public class TeacherTutorialUpdateService implements AbstractUpdateService<Teach
 	@Autowired
 	protected SpamFilterService spamFilterService;
 
-	// AbstractUpdateService<Inventor, Item> interface ---------------------------
+	// AbstractUpdateService<Teacher, Tutorial> interface ---------------------------
 
 
 	@Override
