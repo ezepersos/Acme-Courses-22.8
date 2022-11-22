@@ -24,3 +24,10 @@ administrator.dashboard.form.label.average-budget-help-requests = Average budget
 administrator.dashboard.form.label.deviation-budget-help-requests = Deviation budget of help requests
 administrator.dashboard.form.label.minimum-budget-help-requests = Minimum budget of help requests
 administrator.dashboard.form.label.maximum-budget-help-requests = Maximum budget of help requests
+
+
+administrator.dashboard.form.label.ratio-blahblah = Ratio of blahblah
+administrator.dashboard.form.label.average-blahblah = Average of blahblah by currency
+administrator.dashboard.form.label.deviation-blahblah = Deviation of blahblah by currency
+administrator.dashboard.form.label.minimum-blahblah = Minimum of blahblah by currency
+administrator.dashboard.form.label.maximum-blahblah = Maximum of blahblah by currency

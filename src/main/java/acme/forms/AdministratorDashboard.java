@@ -32,10 +32,15 @@ public class AdministratorDashboard implements Serializable {
 	private Map<HelpRequestStatus, Double>	deviationHelpRequestsBudgetByStatus;
 	private Map<HelpRequestStatus, Double>	minimumHelpRequestsBudgetByStatus;
 	private Map<HelpRequestStatus, Double>	maximumHelpRequestsBudgetByStatus;
-
+	//Added
+	private Double	ratioTutorialBlahblah;
+	private Map<String, Double>	averageBlahBlahCostByCurrency;
+	private Map<String, Double>	deviationBlahBlahCostByCurrency;
+	private Map<String, Double>	minimumBlahBlahCostByCurrency;
+	private Map<String, Double>	maximumBlahBlahCostByCurrency;
 
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
-
+	
 }

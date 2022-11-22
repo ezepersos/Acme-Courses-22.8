@@ -34,7 +34,8 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 
 	@Autowired
 	protected AdministratorDashboardRepository repository;
-	
+
+
 	@Override
 	public boolean authorise(final Request<AdministratorDashboard> request) {
 		assert request != null;
@@ -47,60 +48,82 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		request.unbind(entity, model, "totalNumberOfTheoryTutorials", "averageCostOfTheoryTutorialsByCurrency", "deviationCostOfTheoryTutorialsByCurrency",
-			"minimumCostOfTheoryTutorialsByCurrency", "maximumCostOfTheoryTutorialsByCurrency", "totalNumberOfLabTutorials",
-			"averageCostOfLabTutorialsByCurrency", "deviationCostOfLabTutorialsByCurrency", "minimumCostOfLabTutorialsByCurrency", "maximumCostOfLabTutorialsByCurrency",
-			"totalNumberOfHelpRequestByStatus", "averageHelpRequestsBudgetByStatus", "deviationHelpRequestsBudgetByStatus", "minimumHelpRequestsBudgetByStatus", "maximumHelpRequestsBudgetByStatus");
+		request.unbind(entity, model, "totalNumberOfTheoryTutorials", "averageCostOfTheoryTutorialsByCurrency", "deviationCostOfTheoryTutorialsByCurrency", "minimumCostOfTheoryTutorialsByCurrency", "maximumCostOfTheoryTutorialsByCurrency",
+			"totalNumberOfLabTutorials", "averageCostOfLabTutorialsByCurrency", "deviationCostOfLabTutorialsByCurrency", "minimumCostOfLabTutorialsByCurrency", "maximumCostOfLabTutorialsByCurrency", "totalNumberOfHelpRequestByStatus",
+			"averageHelpRequestsBudgetByStatus", "deviationHelpRequestsBudgetByStatus", "minimumHelpRequestsBudgetByStatus", "maximumHelpRequestsBudgetByStatus", "ratioTutorialBlahblah", "averageBlahBlahCostByCurrency", "deviationBlahBlahCostByCurrency",
+			"minimumBlahBlahCostByCurrency", "maximumBlahBlahCostByCurrency");
 	}
-	
+
 	@Override
 	public AdministratorDashboard findOne(final Request<AdministratorDashboard> request) {
 		assert request != null;
 
 		final AdministratorDashboard result = new AdministratorDashboard();
-		
+
 		final EnumMap<HelpRequestStatus, Integer> mapTotalNumberHR = new EnumMap<>(HelpRequestStatus.class);
 		final EnumMap<HelpRequestStatus, Double> mapAverageHR = new EnumMap<>(HelpRequestStatus.class);
 		final EnumMap<HelpRequestStatus, Double> mapDeviationHR = new EnumMap<>(HelpRequestStatus.class);
 		final EnumMap<HelpRequestStatus, Double> mapMinumumHR = new EnumMap<>(HelpRequestStatus.class);
 		final EnumMap<HelpRequestStatus, Double> mapMaximumHR = new EnumMap<>(HelpRequestStatus.class);
-	
+
 		final Map<String, Double> averageCostTheoryByC = new HashMap<>();
 		final Map<String, Double> deviationCostTheoryByC = new HashMap<>();
 		final Map<String, Double> minCostTheoryByC = new HashMap<>();
 		final Map<String, Double> maxCostTheoryByC = new HashMap<>();
-		
+
 		final Map<String, Double> averageCostLabByC = new HashMap<>();
 		final Map<String, Double> deviationCostLabByC = new HashMap<>();
 		final Map<String, Double> minCostLabByC = new HashMap<>();
 		final Map<String, Double> maxCostLabByC = new HashMap<>();
 		
-		for(final HelpRequestStatus status: HelpRequestStatus.values()) {
-			for(final Object[] obj: this.repository.operationsHelpRequest(status)) {
+		 //Added
+		final Map<String, Double> averageBlahBlahCostByCurrency = new HashMap<String, Double>();
+		final Map<String, Double> deviationBlahBlahCostByCurrency = new HashMap<String, Double>();
+		final Map<String, Double> minimumBlahBlahCostByCurrency = new HashMap<String, Double>();
+		final Map<String, Double> maximumBlahBlahCostByCurrency = new HashMap<String, Double>();
+
+		for (final HelpRequestStatus status : HelpRequestStatus.values()) {
+			for (final Object[] obj : this.repository.operationsHelpRequest(status)) {
 				mapTotalNumberHR.put(status, this.getIntegerValue(obj[0]));
-				mapAverageHR.put(status,  this.getDoubleValue(obj[1]));
+				mapAverageHR.put(status, this.getDoubleValue(obj[1]));
 				mapDeviationHR.put(status, this.getDoubleValue(obj[2]));
 				mapMinumumHR.put(status, this.getDoubleValue(obj[3]));
 				mapMaximumHR.put(status, this.getDoubleValue(obj[4]));
 			}
 		}
-		
-		for(final Object[] obj: this.repository.operationsTutorialsByC(TutorialType.THEORY)) {
+
+		for (final Object[] obj : this.repository.operationsTutorialsByC(TutorialType.THEORY)) {
 			averageCostTheoryByC.put(obj[0].toString(), Double.valueOf(obj[1].toString()));
 			deviationCostTheoryByC.put(obj[0].toString(), Double.valueOf(obj[2].toString()));
 			minCostTheoryByC.put(obj[0].toString(), Double.valueOf(obj[3].toString()));
 			maxCostTheoryByC.put(obj[0].toString(), Double.valueOf(obj[4].toString()));
 		}
-		
-		for(final Object[] obj: this.repository.operationsTutorialsByC(TutorialType.LAB)) {
+
+		for (final Object[] obj : this.repository.operationsTutorialsByC(TutorialType.LAB)) {
 			averageCostLabByC.put(obj[0].toString(), Double.valueOf(obj[1].toString()));
 			deviationCostLabByC.put(obj[0].toString(), Double.valueOf(obj[2].toString()));
 			minCostLabByC.put(obj[0].toString(), Double.valueOf(obj[3].toString()));
 			maxCostLabByC.put(obj[0].toString(), Double.valueOf(obj[4].toString()));
 		}
 		
+		for (final Object[] obj : this.repository.operationsByBlahBlah()) {
+			averageBlahBlahCostByCurrency.put(obj[0].toString(), Double.valueOf(obj[1].toString()));
+			deviationBlahBlahCostByCurrency.put(obj[0].toString(), Double.valueOf(obj[2].toString()));
+			maximumBlahBlahCostByCurrency.put(obj[0].toString(), Double.valueOf(obj[3].toString()));
+			minimumBlahBlahCostByCurrency.put(obj[0].toString(), Double.valueOf(obj[4].toString()));
+		}
+
 		result.setTotalNumberOfTheoryTutorials(this.repository.totalTutorials(TutorialType.THEORY));
 		result.setTotalNumberOfLabTutorials(this.repository.totalTutorials(TutorialType.LAB));
+		Double ratioBlahblah = (100 * (this.repository.totalBlahblah()/this.repository.totalTutorials()));
+		if(ratioBlahblah.isNaN()) {
+			ratioBlahblah = .0;
+		}
+		result.setRatioTutorialBlahblah(ratioBlahblah);
+		result.setAverageBlahBlahCostByCurrency(averageBlahBlahCostByCurrency);
+		result.setDeviationBlahBlahCostByCurrency(deviationBlahBlahCostByCurrency);
+		result.setMaximumBlahBlahCostByCurrency(maximumBlahBlahCostByCurrency);
+		result.setMinimumBlahBlahCostByCurrency(minimumBlahBlahCostByCurrency);
 		result.setTotalNumberOfHelpRequestByStatus(mapTotalNumberHR);
 		result.setAverageCostOfTheoryTutorialsByCurrency(averageCostTheoryByC);
 		result.setDeviationCostOfTheoryTutorialsByCurrency(deviationCostTheoryByC);
@@ -119,15 +142,15 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 
 	private Integer getIntegerValue(final Object obj) {
 		Integer res = 0;
-		if(obj != null) {
+		if (obj != null) {
 			res = Integer.valueOf(obj.toString());
 		}
 		return res;
 	}
-	
+
 	private Double getDoubleValue(final Object obj) {
 		Double res = .0;
-		if(obj != null) {
+		if (obj != null) {
 			res = Double.valueOf(obj.toString());
 		}
 		return res;
@@ -136,5 +159,3 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 	// Internal state ---------------------------------------------------------
 
 }
-
-

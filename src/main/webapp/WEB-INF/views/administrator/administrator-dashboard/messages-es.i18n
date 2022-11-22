@@ -24,3 +24,9 @@ administrator.dashboard.form.label.average-budget-help-requests = Presupuesto me
 administrator.dashboard.form.label.deviation-budget-help-requests = Desviación del Presupuesto de las solicitudes de ayuda
 administrator.dashboard.form.label.minimum-budget-help-requests = Presupuesto mínimo de solicitudes de ayuda
 administrator.dashboard.form.label.maximum-budget-help-requests = Presupuesto máximo de solicitudes de ayuda
+
+administrator.dashboard.form.label.ratio-blahblah = Ratio de blahblah
+administrator.dashboard.form.label.average-blahblah = Media de blahblah
+administrator.dashboard.form.label.deviation-blahblah = Desviación de blahblah
+administrator.dashboard.form.label.minimum-blahblah = Minimo of blahblah
+administrator.dashboard.form.label.maximum-blahblah = Maximo of blahblah

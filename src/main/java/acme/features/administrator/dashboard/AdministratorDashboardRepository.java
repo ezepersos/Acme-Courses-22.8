@@ -20,4 +20,13 @@ public interface AdministratorDashboardRepository extends AbstractRepository{
 	@Query("select count(h), avg(h.budget.amount), stddev(h.budget.amount), min(h.budget.amount), max(h.budget.amount) from HelpRequest h where h.status = :status")
 	List<Object[]> operationsHelpRequest(HelpRequestStatus status);
 	
+	@Query("select b.cost.currency, avg(b.cost.amount), stddev(b.cost.amount), min(b.cost.amount), max(b.cost.amount) from Blahblah b group by b.cost.currency")
+	List<Object[]> operationsByBlahBlah();
+	
+	@Query("select count(b) from Blahblah b")
+	Double totalBlahblah();
+	
+	@Query("select count(t) from Tutorial t")
+	Double totalTutorials();
+	
 }

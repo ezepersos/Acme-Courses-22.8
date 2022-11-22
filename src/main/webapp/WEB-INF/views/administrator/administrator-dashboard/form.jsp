@@ -210,5 +210,80 @@
 			</c:forEach>
 		</td>
 	</tr>
+	
+	
+	
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.ratio-blahblah"/>
+		</th>
+		<td>
+			<acme:print value="${ratioTutorialBlahblah}"/>
+		</td>
+	</tr><tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.average-blahblah"/>
+		</th>
+		<td>
+		<c:choose>
+			<c:when test="${empty deviationBlahBlahCostByCurrency}">
+				<p>0</p>
+			</c:when>
+			<c:otherwise>
+			<c:forEach items="${averageBlahBlahCostByCurrency}" var="entry">
+	    		${entry.key} = ${entry.value}<br>
+			</c:forEach>
+			</c:otherwise>
+		</c:choose>
+	</tr><tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.deviation-blahblah"/>
+		</th>
+		<td>
+		<c:choose>
+			<c:when test="${empty deviationBlahBlahCostByCurrency}">
+				<p>0</p>
+			</c:when>
+			<c:otherwise>
+			<c:forEach items="${deviationBlahBlahCostByCurrency}" var="entry">
+	    		${entry.key} = ${entry.value}<br>
+			</c:forEach>
+			</c:otherwise>
+		</c:choose>
+		</td>
+	</tr><tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.minimum-blahblah"/>
+		</th>
+		<td>
+		<c:choose>
+			<c:when test="${empty minimumBlahBlahCostByCurrency}">
+				<p>0</p>
+			</c:when>
+			<c:otherwise>
+			<c:forEach items="${minimumBlahBlahCostByCurrency}" var="entry">
+	    		${entry.key} = ${entry.value}<br>
+			</c:forEach>
+			</c:otherwise>
+		</c:choose>
+		</td>
+	</tr><tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.maximum-blahblah"/>
+		</th>
+		<td>		
+		<c:choose>
+			<c:when test="${empty maximumBlahBlahCostByCurrency}">
+				<p>0</p>
+			</c:when>
+			<c:otherwise>
+			<c:forEach items="${maximumBlahBlahCostByCurrency}" var="entry">
+	    		${entry.key} = ${entry.value}<br>
+			</c:forEach>
+			</c:otherwise>
+		</c:choose>
+		</td>
+		
+	</tr>
 
 </table>
